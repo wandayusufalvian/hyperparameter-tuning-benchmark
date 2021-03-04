@@ -1,0 +1,33 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "Archives": {
+      "name": "Archives",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Data_Preprocessing": {
+      "name": "Data_Preprocessing",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Experiments": {
+      "name": "Experiments",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Notes": {
+      "name": "Notes",
+      "isOrdered": true,
+      "folders": {},
+      "files": {
+        "how insert code to ms word": 0
+      }
+    }
+  },
+  "files": {}
+}

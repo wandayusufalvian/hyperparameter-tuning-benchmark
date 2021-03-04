@@ -1,0 +1,19 @@
+- open notepad ++
+- paste your code 
+- select your programming language (in language tab)
+- insert code line number:
+    - select all the code
+    - alt + C 
+- copy to ms word 
+    - select all the code 
+    - shift + alt + c
+- open ms word
+- insert -> object -> opendocument text
+- paste your code in new opened window
+- add border 
+- save 
+- close the window
+
+
+
+

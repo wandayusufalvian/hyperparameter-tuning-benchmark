@@ -1,0 +1,6 @@
+>> if there is 30% irrelevant data, how handle that? does delete that column is good solution? 
+data gk dihapus, beberapa pengalamanan orang di kaggle atau medium mengatakan bahwa dihapus kalau benar2 banyak 
+misal > 80% data. 
+ada paper (work/thesis/reference/data-processing/DataAnalysisBankDataset) yang melakaukan processing yg sama 
+dan di situ gk dihapus kolom contact-nya 
+
