@@ -34,7 +34,9 @@ data_bank=data_bank.drop(['poutcome'],axis=1)
 #data_bank.info()
 '''DELETE DURATION COLUMN'''
 data_bank=data_bank.drop(['duration'],axis=1)
-# Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed.
+# Important note: this attribute highly affects the 
+# output target (e.g., if duration=0 then y='no'). 
+# Yet, the duration is not known before a call is performed.
 
 '''CHECK OUTLIER IN CONTINUOUS DATA'''
-plt.boxplot(data_bank['age'])
+#plt.boxplot(data_bank['age'])
