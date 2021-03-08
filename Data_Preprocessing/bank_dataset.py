@@ -8,12 +8,13 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.compose import ColumnTransformer
 from service import *
 
-'''READ FILES'''  
-data_bank=pd.read_csv(r"/mnt/c/Users/Wanda Yusuf Alvian/cs/Code/machine-learning-collections/thesis/Data_Preprocessing/Dataset/bank-full.csv",sep=';')
+'''READ FILES and EXPLORE DATA'''  
+data_bank=pd.read_csv(r"/home/yusuf/hyperparameter-tuning-benchmark/Data_Preprocessing/Dataset/bank-full.csv",sep=';')
 #data_bank.info()
+#print(max(data_bank['age']))
 
 '''CHECK IRRELEVANT VALUE''' 
-# show_values(data_bank)
+show_values(data_bank)
 
 '''CALCULATE PERCENTAGE OF 'UNKNOWN' DATA'''
 # print("job : ",288*100/45211)
