@@ -4,19 +4,19 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.compose import ColumnTransformer
 
-def show_values(X):
+def banyak_tiap_kategori(X):
     cat_df=X.select_dtypes(include='object')
     cat_cols=cat_df.columns
     for i in cat_cols:
         print(i,'\n')
         print(X[i].value_counts(),'\n')
 
-def split_x_y(data):
+def pisah_x_y(data):
     y=data.iloc[:,-1:]
     X=data.iloc[:,0:-1]
     return X,y
 
-def count_categories(X):
+def hitung_kategori(X):
     categorical_ix = X.select_dtypes(include=['object']).columns 
     sum=0
     for i in categorical_ix:
@@ -24,15 +24,16 @@ def count_categories(X):
         sum=sum+len(X[i].unique())
     print("\n total categories= ",sum)
 
-def transform_data(X,y):
+def transform_kelas(y):
     y=y.to_numpy().ravel()
     y=LabelEncoder().fit_transform(y)
-    numerical_ix = X.select_dtypes(include=['int64']).columns
-    categorical_ix = X.select_dtypes(include=['object']).columns
-    t = [('cat', OneHotEncoder(sparse=False), categorical_ix), ('num', MinMaxScaler(), numerical_ix)]
-    col_transform = ColumnTransformer(transformers=t)
+    return y
+
+def transform_fitur(X,numerical_col,categorical_onehot):
+    t = [('cat', OneHotEncoder(sparse=False), categorical_onehot),('num', MinMaxScaler(), numerical_col)]
+    col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
     X=col_transform.fit_transform(X)
-    return X,y
+    return X
 
 def ekspor_data(X,y,nama_X,nama_y):
     X=pd.DataFrame(X)

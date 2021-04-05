@@ -3,8 +3,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.compose import make_column_transformer 
-
 from service import *
 
 
@@ -19,11 +17,11 @@ data_bank=data_bank.drop(['duration'],axis=1)
 
 #%%
 '''show features'''
-data_bank.info()
+#data_bank.info()
 
 #%% 
 '''show categorical values''' 
-# show_values(data_bank)
+banyak_tiap_kategori(data_bank)
 
 #%% 
 '''change unknown values => most frequent values'''
@@ -45,10 +43,6 @@ data_bank['contact']=data_bank['contact'].replace(['unknown'],'cellular')
 '''delete poutcome column'''
 data_bank=data_bank.drop(['poutcome'],axis=1)
 
-#%%
-'''categories quantity'''
-#X,y=split_x_y(data_bank)
-#count_categories(X)
 
 #%%
 '''group categories value in job feature'''
@@ -60,19 +54,37 @@ data_bank['job']=data_bank['job'].replace(['unemployed','housemaid','student','a
 data_bank['month']=data_bank['month'].replace(['jan','feb','mar','apr','may','jun'],'semester-1')
 data_bank['month']=data_bank['month'].replace(['jul','aug','sep','oct','nov','dec'],'semester-2')
 
-#show_values(data_bank)
+
 
 #%%
-'''transform and normalize data'''
-X,y=split_x_y(data_bank)
+'''data shape before transformation'''
+X,y=pisah_x_y(data_bank)
 print("before transform")
 print("y= ",y.shape)
 print("X= ",X.shape)
-X,y=transform_data(X,y)
+
+#%%
+# fitur yang ditransformasi dengan label encoding 
+'''label encoding'''
+kategori=['primary','secondary','tertiary']
+label=[1,2,3]
+data_bank['education']=data_bank['education'].replace(kategori,label)
+
+#%%
+'''min max scaler and one hot encoding + transform kelas '''
+numerical_minmax=['age','balance','day','campaign','pdays','previous']
+categorical_onehot=['job','marital','default','housing','loan','contact','month']
+y=transform_kelas(y)
+X=transform_fitur(X,numerical_minmax,categorical_onehot)
+
+#%%
 print("after transform")
 print("y= ",y.shape)
 print("X= ",X.shape)
-
+print(data_bank.head())
+#%%
+data_bank.info()
 #%%
 '''export data'''
 ekspor_data(X,y,"X-bank","y-bank")
+
