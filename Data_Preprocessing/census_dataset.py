@@ -114,7 +114,7 @@ X,y=pisah_x_y(data_census)
 
 # %%
 '''
-sebelum melakukan onehot encoding
+sebelum melakukan one hot encoding
 hitung jumlah kategori tiap fitur
 yang tipe datanya object 
 '''
@@ -146,3 +146,4 @@ print("X= ",X.shape)
 #%%
 '''export data'''
 ekspor_data(X,y,"X-census","y-census")
+# %%
