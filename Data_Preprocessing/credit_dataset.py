@@ -30,6 +30,10 @@ data_credit['MARRIAGE']=data_credit['MARRIAGE'].replace([0],3)
 print(data_credit['MARRIAGE'].value_counts())
 
 #%%
+
+print(data_credit['SEX'].value_counts())
+
+#%%
 X,y=pisah_x_y(data_credit)
 print("before transform")
 print("y= ",y.shape)
