@@ -27,5 +27,52 @@ def random_search(X,y,model,parameter,iterasi,evalscore,seed):
     
     return auc,std,best_index,best_param
 
+def grid_search(X,y,model,parameter,evalscore):
+    auc=[]
+    std=[]
+
+    grid_search=GridSearchCV(
+                model,
+                parameter,
+                scoring = evalscore,
+                n_jobs = -1,
+                cv = 5,
+                verbose= 1
+    )
+    
+    grid_search.fit(X,y)
+
+    best_index=grid_search.best_index_
+    auc.append(grid_search.cv_results_['mean_test_score'])
+    std.append(grid_search.cv_results_['std_test_score'])
+    best_param=grid_search.best_params_
+    
+    return auc,std,best_index,best_param
+
+def bayes_opt(X,y,model,parameter,iterasi,evalscore,seed):
+    
+    auc=[]
+    std=[]
+
+    bayes_search= BayesSearchCV(
+                   model, 
+                   parameter, 
+                   n_jobs=-1, 
+                   n_iter=iterasi,
+                   scoring=evalscore,
+                   cv=5,
+                   random_state=seed,
+                   verbose= 0,
+                   iid=True 
+    )
+    
+    bayes_search.fit(X,y)
+    
+    best_index=bayes_search.best_index_
+    auc.append(bayes_search.cv_results_['mean_test_score'])
+    std.append(bayes_search.cv_results_['std_test_score'])
+    best_param=bayes_search.best_params_
+    
+    return auc,std,best_index,best_param
 
 
