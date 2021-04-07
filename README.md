@@ -25,3 +25,7 @@ Dataset :
 - [Default Of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 - [Census Income Dataset](http://archive.ics.uci.edu/ml/datasets/Census+Income)
 
+Experiments :
+- save all code in google drive that sync with google drive app in my local machine 
+- open and run code in google drive using google colab 
+
