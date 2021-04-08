@@ -1,3 +1,7 @@
+from catboost import CatBoostClassifier
+
+model_c=CatBoostClassifier()
+
 
 def catboost_bank_default():
     return 0 

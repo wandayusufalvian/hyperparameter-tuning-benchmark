@@ -8,6 +8,9 @@ Requirements :
 - pandas 0.24.2 
 - configspace 0.4.17
 - scikit-optimize 0.8.1
+- xgboost 1.3.1
+- lightgbm 3.1.1
+- catboost 0.24.4 
 
 Hyperparameter Optimization : 
 - grid search
@@ -25,7 +28,4 @@ Dataset :
 - [Default Of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 - [Census Income Dataset](http://archive.ics.uci.edu/ml/datasets/Census+Income)
 
-Experiments :
-- save all code in google drive that sync with google drive app in my local machine 
-- open and run code in google drive using google colab 
 

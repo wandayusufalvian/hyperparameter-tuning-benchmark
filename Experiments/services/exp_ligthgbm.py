@@ -1,3 +1,8 @@
+from lightgbm import LGBMClassifier
+
+
+
+model_l=LGBMClassifier()
 
 def lightgbm_bank_default():
     return 0 

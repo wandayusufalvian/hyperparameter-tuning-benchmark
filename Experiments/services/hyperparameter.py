@@ -4,7 +4,15 @@ import ConfigSpace.hyperparameters as CSH
 from skopt.space import Real,Integer
 
 
-
+def hyper_dummy():
+    cs={
+        'eta': [0.01,0.5], 
+        'subsample': [0.1,0.8],
+        'max_depth': [2],
+        'gamma':[0.001],
+        'min_child_weight':[2]
+    }
+    return cs
 def hyper_xgboost_gs():
     cs={
         'eta': [0.01,0.5], 
