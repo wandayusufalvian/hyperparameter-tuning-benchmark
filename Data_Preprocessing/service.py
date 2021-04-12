@@ -16,14 +16,6 @@ def pisah_x_y(data):
     X=data.iloc[:,0:-1]
     return X,y
 
-def hitung_kategori(X):
-    categorical_ix = X.select_dtypes(include=['object']).columns 
-    sum=0
-    for i in categorical_ix:
-        print(i,"=",len(X[i].unique())," categories")
-        sum=sum+len(X[i].unique())
-    print("\n total categories= ",sum)
-
 def transform_kelas(y):
     y=y.to_numpy().ravel()
     y=LabelEncoder().fit_transform(y)
@@ -40,3 +32,18 @@ def ekspor_data(X,y,nama_X,nama_y):
     y=pd.DataFrame(y)
     X.to_csv('dataset-ready/'+nama_X+'.csv',index=False,header=None)
     y.to_csv('dataset-ready/'+nama_y+'.csv',index=False,header=None)
+
+def hitung_kategori(X):
+    categorical_ix = X.select_dtypes(include=['object']).columns 
+    sum=0
+    for i in categorical_ix:
+        print(i,"=",len(X[i].unique())," kategori")
+        sum=sum+len(X[i].unique())
+    print("\n total kategori= ",sum)
+
+# def hitung_kategori(X,fitur_kategorikal):
+#     sum=0
+#     for i in fitur_kategorikal:
+#         print(i,"=",len(X[i].unique())," kategori")
+#         sum=sum+len(X[i].unique())
+#     print("\n total kategori= ",sum)

@@ -6,29 +6,21 @@ import matplotlib.pyplot as plt
 from service import *
 
 #%%
-'''read files and explore data'''  
+'''baca data'''  
 data_census=pd.read_csv(r"/home/yusuf/hyperparameter-tuning-benchmark/Data_Preprocessing/dataset-raw/census_income.csv")
-#data_census.info()
+data_census.info()
 
 #%%
-'''
-cek banyak nilai tidak relevan pada data kategorikal 
-'''
+'''banyak nilai kategori di tiap fitur kategorikal''' 
 banyak_tiap_kategori(data_census)
 
-
 #%%
-'''
-hitung persentase data dengan nilai '?'
-'''
-print("workclass : ", 1836*100/32561)
-print("occupation : ", 1843*100/32561)
-print("native.country : ", 583*100/32561)
+# '''hitung persentase data dengan nilai '?' '''
+# print("workclass : ", 1836*100/32561)
+# print("occupation : ", 1843*100/32561)
+# print("native.country : ", 583*100/32561)
 # %%
-'''
-ubah nilai '?' menjadi nilai yang paling sering muncul pada masing2 
-fiturnya 
-'''
+'''ubah nilai '?' menjadi nilai yang paling sering muncul pada tiap fitur kategorikal'''
 data_census['workclass']=data_census['workclass'].replace(['?'],'Private')
 data_census['occupation']=data_census['occupation'].replace(['?'],'Prof-specialty')
 data_census['native.country']=data_census['native.country'].replace(['?'],'United-States')
@@ -47,10 +39,7 @@ hitung banyak nilai kategorikal di taip data kategorikal
 hitung_kategori(data_census)
 
 # %%
-'''
-transform nilai kategori pada fitur education menjadi numerikal 
-sesuai urutan tingkat pendidikan 
-'''
+'''transformasi nilai kategori pada fitur education'''
 di={
     'Doctorate':15,
     'Masters':14,
@@ -72,15 +61,14 @@ di={
 data_census['education']=data_census['education'].map(di)
 data_census['education'].value_counts()
 
+'''pengelompokan nilai kategori pada fitur kategorikal'''
 #%%
 data_census['workclass']=data_census['workclass'].replace(['Self-emp-not-inc', 'Self-emp-inc' ],'Self-emp')
 data_census['workclass']=data_census['workclass'].replace(['Local-gov', 'State-gov', 'Federal-gov'],'Gov-emp')
 data_census['workclass']=data_census['workclass'].replace(['Without-pay','Never-worked'],'Others')
 
-
 data_census['marital.status']=data_census['marital.status'].replace(['Married-civ-spouse', 'Married-spouse-absent', 'Married-AF-spouse'],'Married')
 data_census['marital.status']=data_census['marital.status'].replace(['Divorced', 'Separated', 'Widowed'],'Others')
-
 
 data_census['occupation']=data_census['occupation'].replace(['Prof-specialty', 'Craft-repair' ],'Professional')
 data_census['occupation']=data_census['occupation'].replace(['Exec-managerial', 'Adm-clerical', 'Sales', 'Armed-Forces', 'Tech-support', 'Machine-op-inspct'],'White-collar')
