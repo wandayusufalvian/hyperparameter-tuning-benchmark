@@ -1,8 +1,0 @@
-AUC: [array([0.51291962, 0.49192787, 0.48595857, 0.4807511 ])]
-std: [array([0.22576864, 0.23875146, 0.17920963, 0.17151874])]
-params: [[{'eta': 0.01, 'gamma': 0.001, 'max_depth': 2, 'min_child_weight': 2, 'subsample': 0.1}, {'eta': 0.01, 'gamma': 0.001, 'max_depth': 2, 'min_child_weight': 2, 'subsample': 0.8}, {'eta': 0.5, 'gamma': 0.001, 'max_depth': 2, 'min_child_weight': 2, 'subsample': 0.1}, {'eta': 0.5, 'gamma': 0.001, 'max_depth': 2, 'min_child_weight': 2, 'subsample': 0.8}]]
-best_index: 0
-best_auc: 0.512919622525027
-best_std: 0.22576863938061562
-best_param: {'eta': 0.01, 'gamma': 0.001, 'max_depth': 2, 'min_child_weight': 2, 'subsample': 0.1}
-time: 23.1275954246521 seconds

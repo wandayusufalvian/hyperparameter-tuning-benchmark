@@ -23,27 +23,29 @@ def baca_data_census():
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
 
-
-def simpan_hasil(name,list_hasil):
+def simpan_hasil(name,hasil):
     save_path=os.path.join(os.getcwd(),"results",name+".txt")
-    # untuk default hyperparameter 
-    if len(list_hasil)==3:
+    # untuk default hyperparameter
+    if len(hasil)==2:
         f=open(save_path,'w')
-        f.write("AUC: "+list_hasil[0]+"\n")
-        f.write("std: "+list_hasil[1]+"\n")
-        f.write("time: "+list_hasil[2]+" seconds")
+        kunci=hasil[0].keys()
+        for i in kunci:
+            f.write(i+" : "+str([hasil[0][i]])+"\n")
+        f.write("rata-rata test score : "+str(hasil[0]["test_score"].mean())+"\n")
+        f.write("std test score : "+str(hasil[0]["test_score"].std())+"\n")
+        f.write("total time: "+str(hasil[1])+" seconds")
+        
         f.close()
-    # untuk yang menggunakan hpo 
+    # untuk optimized hyperparameter
     else:
         f=open(save_path,'w')
-        f.write("AUC: "+list_hasil[0]+"\n")
-        f.write("std: "+list_hasil[1]+"\n")
-        f.write("params: "+list_hasil[2]+"\n")
-        f.write("best_index: "+list_hasil[3]+"\n")
-        f.write("best_auc: "+list_hasil[4]+"\n")
-        f.write("best_std: "+list_hasil[5]+"\n")
-        f.write("best_param: "+list_hasil[6]+"\n")
-        f.write("time: "+list_hasil[7]+" seconds")
+        kunci=hasil[0].keys()
+        best_index=hasil[1]
+        for i in kunci:
+            f.write(i+" : "+str([hasil[0][i]])+"\n")
+        f.write("best_index: "+str(best_index)+"\n")
+        f.write("best_auc: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
+        f.write("best_std: "+str(hasil[0]['std_test_score'][best_index])+"\n")
+        f.write("best_param: "+str(hasil[0]['params'][best_index])+"\n")
+        f.write("total time : "+str(hasil[2])+" seconds")
         f.close()
-    
-

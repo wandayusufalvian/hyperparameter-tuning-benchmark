@@ -74,12 +74,9 @@ data_census['occupation']=data_census['occupation'].replace(['Prof-specialty', '
 data_census['occupation']=data_census['occupation'].replace(['Exec-managerial', 'Adm-clerical', 'Sales', 'Armed-Forces', 'Tech-support', 'Machine-op-inspct'],'White-collar')
 data_census['occupation']=data_census['occupation'].replace(['Other-service', 'Transport-moving', 'Handlers-cleaners', 'Farming-fishing', 'Protective-serv', 'Priv-house-serv'],'Blue-collar')
 
-
 data_census['relationship']=data_census['relationship'].replace(['Not-in-family','Unmarried','Other-relative','Own-child'],'Others')
 
-
 data_census['race']=data_census['race'].replace(['Amer-Indian-Eskimo','Asian-Pac-Islander','Other'],'Others')
-
 
 data_census['native.country']=data_census['native.country'].replace(['Cambodia', 'China', 'Hong', 'Laos', 'Thailand', 'Japan', 'Taiwan', 'Vietnam', 'India', 'Iran', 'Philippines', 'South'],'Asia')
 data_census['native.country']=data_census['native.country'].replace(['Cuba', 'Guatemala', 'Jamaica', 'Nicaragua', 'Puerto-Rico', 'Dominican-Republic', 'El-Salvador', 'Haiti', 'Honduras', 'Mexico', 'Trinadad&Tobago', 'Ecuador', 'Peru', 'Columbia' ],'South-America')
@@ -98,7 +95,6 @@ banyak_tiap_kategori(data_census)
 split data 
 '''
 X,y=pisah_x_y(data_census)
-
 
 # %%
 '''
