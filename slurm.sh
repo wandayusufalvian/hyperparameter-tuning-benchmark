@@ -5,5 +5,6 @@
 #
 #SBATCH --time=10:00
 #SBATCH --nodes=1
+#SBATCH --nodelist=komputasi04
 
 srun hello.py
