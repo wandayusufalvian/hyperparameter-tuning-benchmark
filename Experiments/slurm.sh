@@ -7,4 +7,4 @@
 #SBATCH --nodes=1
 #SBATCH --nodelist=komputasi06
 
-srun hello.py
+srun python hello.py
