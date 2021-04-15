@@ -6,4 +6,3 @@ catboost==0.24.4
 ConfigSpace==0.4.17
 scikit-optimize==0.8.1
 scikit-learn==0.24.0
-wheel==0.36.2
