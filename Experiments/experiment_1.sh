@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=experiment_1
-#SBATCH --output=experiment_1.txt
+#SBATCH --output=results/experiment_1_xgboost_bank_default.txt
 #
 #SBATCH --time=30:00
 #SBATCH --nodes=1
