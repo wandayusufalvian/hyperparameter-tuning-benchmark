@@ -58,7 +58,7 @@ def simpan_hasil_hpc(hasil):
             print(i+" : "+str([hasil[0][i]])+"\n")
         print("rata-rata test score : "+str(hasil[0]["test_score"].mean())+"\n")
         print("std test score : "+str(hasil[0]["test_score"].std())+"\n")
-        print("total time: "+str(hasil[1])+" seconds"+"\n\n")
+        print("total time: "+str(hasil[1])+" seconds"+"\n")
 
     # untuk optimized hyperparameter
     else:
@@ -70,4 +70,4 @@ def simpan_hasil_hpc(hasil):
         print("best_auc: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
         print("best_std: "+str(hasil[0]['std_test_score'][best_index])+"\n")
         print("best_param: "+str(hasil[0]['params'][best_index])+"\n")
-        print("total time : "+str(hasil[2])+" seconds"+"\n\n")
+        print("total time : "+str(hasil[2])+" seconds"+"\n")
