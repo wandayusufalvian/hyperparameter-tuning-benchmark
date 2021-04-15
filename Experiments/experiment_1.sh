@@ -7,4 +7,5 @@
 #SBATCH --nodes=1
 #SBATCH --nodelist=komputasi06
 
-srun python hello.py
+source ~/anaconda3/bin/activate
+srun python experiment_1_xgboost_bank_default.py
