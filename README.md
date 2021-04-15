@@ -28,3 +28,19 @@ Dataset :
 - [Default Of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 - [Census Income Dataset](http://archive.ics.uci.edu/ml/datasets/Census+Income)
 
+Experiments:
+- experiment_1_xgboost_bank_default.py 
+- experiment_2_xgboost_bank_gridsearch.py
+- experiment_3_xgboost_bank_randomsearch.py
+- experiment_4_xgboost_bank_bayessearch.py
+- experiment_5_xgboost_bank_bohb.py
+- experiment_6_lightgbm_bank_default.py 
+- experiment_7_lightgbm_bank_gridsearch.py
+- experiment_8_lightgbm_bank_randomsearch.py
+- experiment_9_lightgbm_bank_bayessearch.py
+- experiment_10_lightgbm_bank_bohb.py
+- experiment_11_catboost_bank_default.py 
+- experiment_12_catboost_bank_gridsearch.py
+- experiment_13_catboost_bank_randomsearch.py
+- experiment_14_catboost_bank_bayessearch.py
+- experiment_15_catboost_bank_bohb.py
