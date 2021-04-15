@@ -25,7 +25,7 @@ def optimized_grid_search(X,y,model,parameter):
                 scoring = eval_method,
                 n_jobs = -1,
                 cv = 5,
-                verbose= 10
+                verbose= 0
     )
     search.fit(X,y)
     end_time = time.time()
@@ -46,7 +46,7 @@ def optimized_random_search(X,y,model,parameter,seed):
                    n_jobs=-1, 
                    cv=5, 
                    random_state=seed,
-                   verbose= 10)
+                   verbose= 0)
     search.fit(X,y)
     end_time = time.time()
 

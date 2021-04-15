@@ -1,18 +1,12 @@
 # hyperparameter-tuning-benchmark
 Comparation of BOHB as hyperparameter optimization method with random search, grid search, and bayesian optimization to tune GBDT algorithm using 3 different dataset 
 
-Requirements : 
-- python 3.7 
-- scikit-learn  0.24 
-- numpy 1.16.2 
-- pandas 0.24.2 
-- configspace 0.4.17
-- scikit-optimize 0.8.1
-- xgboost 1.3.1
-- lightgbm 3.1.1
-- catboost 0.24.4 
+environment : 
+- python 3.8.3
+- anaconda 1.4.0
+- Linux Ubuntu 18.04 
 
-Hyperparameter Optimization : 
+hyperparameter Optimization : 
 - grid search
 - random search
 - bayesian optimization 
@@ -23,12 +17,12 @@ GBDT Algorithms :
 - LightGBM
 - CatBoost 
 
-Dataset : 
+dataset : 
 - [Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)
 - [Default Of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients)
 - [Census Income Dataset](http://archive.ics.uci.edu/ml/datasets/Census+Income)
 
-Experiments:
+experiments:
 - experiment_1_xgboost_bank_default.py 
 - experiment_2_xgboost_bank_gridsearch.py
 - experiment_3_xgboost_bank_randomsearch.py
