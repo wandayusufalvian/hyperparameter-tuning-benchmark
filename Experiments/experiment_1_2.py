@@ -2,7 +2,7 @@ import services.data as data
 import services.gbdt as gbdt
 import services.optimize as opt 
 
-iterasi=1
+iterasi=3
 
 for i in range(0,iterasi):
     X,y=data.baca_data_bank()
