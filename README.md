@@ -23,9 +23,9 @@ dataset :
 - [Census Income Dataset](http://archive.ics.uci.edu/ml/datasets/Census+Income)
 
 experiments:
-- experiment_1_xgboost_bank_default.py 
-- experiment_2_xgboost_bank_gridsearch.py
-- experiment_3_xgboost_bank_randomsearch.py
+- experiment_1_xgboost_bank_default.py [done]
+- experiment_2_xgboost_bank_gridsearch.py [done]
+- experiment_3_xgboost_bank_randomsearch.py 
 - experiment_4_xgboost_bank_bayessearch.py
 - experiment_5_xgboost_bank_bohb.py
 - experiment_6_lightgbm_bank_default.py 

@@ -2,6 +2,8 @@ import numpy as np
 import ConfigSpace as CS
 import ConfigSpace.hyperparameters as CSH
 from skopt.space import Real,Integer
+from scipy.stats import uniform
+from scipy.stats import loguniform
     
 def hyper_xgboost_gs():
     cs={
@@ -13,24 +15,34 @@ def hyper_xgboost_gs():
     }
     return cs
 
+# def hyper_xgboost_rs():
+#     cs={
+#         'eta': list(np.logspace
+#                     (-3,0,base=10,num=1000)), #float 
+#         'subsample': list(np.linspace(0.1,1,100)), # float 
+#         'max_depth':list(range(1,101)), # int
+#         'gamma':list(np.linspace(0.001,2,100)), # float
+#         'min_child_weight':list(np.linspace(1,90,100)) # float 
+#     }
+#     return cs 
+
 def hyper_xgboost_rs():
     cs={
-        'eta': list(np.logspace
-                    (np.log10(0.001),np.log10(1),base=10,num=1000)), 
-        'subsample': list(np.linspace(0.1,1,100)),
-        'max_depth':list(range(1,101)),
-        'gamma':list(np.linspace(0.001,2,100)),
-        'min_child_weight':list(range(1,101))
+        'eta': loguniform(1e-5,1),
+        'subsample': uniform(0.1,0.9),
+        'max_depth':list(range(1,99)),
+        'gamma': uniform(0.001,1.999),
+        'min_child_weight': uniform(1,69)
     }
     return cs 
 
 def hyper_xgboost_bo():
     cs={
-        'eta': Real(0.001,1,'log-uniform'), 
+        'eta': Real(1e-5,1,'log-uniform'), 
         'subsample': Real(0.1,1,'uniform'),
         'max_depth': Integer(1,100,'uniform'),
         'gamma': Real(0.001,2,'uniform'),
-        'min_child_weight': Integer(1,100,'uniform')
+        'min_child_weight': Real(1,70,'uniform')
     }
     return cs 
 
