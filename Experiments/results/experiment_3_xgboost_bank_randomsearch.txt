@@ -1,0 +1,2 @@
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 6454 ON komputasi06 CANCELLED AT 2021-04-17T22:03:33 ***
