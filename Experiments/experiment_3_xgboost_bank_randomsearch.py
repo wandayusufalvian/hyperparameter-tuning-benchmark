@@ -10,6 +10,6 @@ for seed in seeds:
     model=gbdt.xgboost_model()
     parameter=hyper.hyper_xgboost_rs()
     hasil=opt.optimized_random_search(X,y,model,parameter,seed)
-    print("=====================================Seed = "+str(i+1)+"======================================================"+"\n")
+    print("=====================================Seed = "+str(seed+1)+"======================================================"+"\n")
     data.simpan_hasil_hpc(hasil)
 
