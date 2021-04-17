@@ -6,3 +6,4 @@ catboost==0.25.1
 ConfigSpace==0.4.18
 scikit-optimize==0.8.1
 scikit-learn==0.23.2
+scipy==1.5.2

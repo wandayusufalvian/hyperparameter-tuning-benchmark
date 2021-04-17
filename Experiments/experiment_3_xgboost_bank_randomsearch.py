@@ -3,9 +3,9 @@ import services.gbdt as gbdt
 import services.optimize as opt 
 import services.hyperparameter as hyper
 
-seed=[1]
+seeds=[42]
 
-for i in seed:
+for seed in seeds:
     X,y=data.baca_data_bank()
     model=gbdt.xgboost_model()
     parameter=hyper.hyper_xgboost_rs()
