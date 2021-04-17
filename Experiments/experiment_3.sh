@@ -3,7 +3,7 @@
 #SBATCH --job-name=experiment_3
 #SBATCH --output=results/experiment_3_xgboost_bank_randomsearch.txt
 #
-#SBATCH --time=03:00:00
+#SBATCH --time=11:59:00
 #SBATCH --nodes=1
 #SBATCH --nodelist=komputasi06
 
