@@ -1,5 +1,5 @@
 Traceback (most recent call last):
-  File "experiment_3_2_xgboost_bank_randomsearch.py", line 12, in <module>
+  File "experiment_3_xgboost_bank_randomsearch.py", line 12, in <module>
     hasil=opt.optimized_random_search(X,y,model,parameter,seed)
   File "/home/m448735/hyperparameter-tuning-benchmark/Experiments/services/optimize.py", line 50, in optimized_random_search
     search.fit(X,y)
@@ -16,4 +16,4 @@ Traceback (most recent call last):
   File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/utils/validation.py", line 867, in check_random_state
     raise ValueError('%r cannot be used to seed a numpy.random.RandomState'
 ValueError: [1] cannot be used to seed a numpy.random.RandomState instance
-srun: error: komputasi04: task 0: Exited with exit code 1
+srun: error: komputasi06: task 0: Exited with exit code 1
