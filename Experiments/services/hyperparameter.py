@@ -46,10 +46,10 @@ def hyper_xgboost_bo():
     }
     return cs 
 
-def hyper_xgboost_bohb(benih):
-    cs = CS.ConfigurationSpace(seed=benih)
+def hyper_xgboost_bohb():
+    cs = CS.ConfigurationSpace()
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
-                          ('eta',lower=0.001,upper=1,log=True))
+                          ('eta',lower=1e-5,upper=1,log=True))
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
                           ('subsample',lower=0.1,upper=1,log=False))
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
@@ -57,7 +57,7 @@ def hyper_xgboost_bohb(benih):
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
                           ('gamma',lower=0.001,upper=2,log=False))
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
-                          ('min_child_weight',lower=1,upper=100,log=False))
+                          ('min_child_weight',lower=1,upper=70,log=False))
     return cs
 
 

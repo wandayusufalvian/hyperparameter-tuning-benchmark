@@ -4,11 +4,11 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import GridSearchCV
 from skopt import BayesSearchCV
+from hpbandster_sklearn import HpBandSterSearchCV
 import time
 
 skf=StratifiedKFold(n_splits=5)
 eval_method="roc_auc"
-iterasi=200
 
 def default_hyperparameter(X,y,model):
     start_time = time.time()
@@ -37,7 +37,7 @@ def optimized_random_search(X,y,model,parameter,seed):
     search=RandomizedSearchCV(
                    model,
                    parameter, 
-                   n_iter=iterasi, 
+                   n_iter=200, 
                    scoring=eval_method, 
                    n_jobs=-1, 
                    cv=5, 
@@ -54,12 +54,29 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
                    model, 
                    parameter, 
                    n_jobs=-1, 
-                   n_iter=iterasi,
+                   n_iter=200,
                    scoring=eval_method,
                    cv=5,
                    random_state=seed,
                    verbose= 0,
                    iid=True 
+    )
+    search.fit(X,y)
+    end_time = time.time()
+
+    return [search.cv_results_,search.best_index_,end_time-start_time]
+
+def optimized_bohb(X,y,model,parameter,iter):
+    start_time = time.time()
+    search= HpBandSterSearchCV(
+                   model, 
+                   parameter, 
+                   n_jobs=-1, 
+                   n_iter=iter, # bisa diubah2 untuk lihat apakah mempengaruhi hasil 
+                   resource_name='n_samples', # bisa diganti n_estimator
+                   scoring=eval_method,
+                   cv=5,
+                   verbose= 0
     )
     search.fit(X,y)
     end_time = time.time()
