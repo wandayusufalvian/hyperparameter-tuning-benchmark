@@ -14,7 +14,6 @@ def hyper_xgboost_gs():
         'min_child_weight':[2,5,7,11,15]
     }
     return cs
-
 # def hyper_xgboost_rs():
 #     cs={
 #         'eta': list(np.logspace
@@ -25,7 +24,6 @@ def hyper_xgboost_gs():
 #         'min_child_weight':list(np.linspace(1,90,100)) # float 
 #     }
 #     return cs 
-
 def hyper_xgboost_rs():
     cs={
         'eta': loguniform(1e-5,1),
@@ -60,8 +58,6 @@ def hyper_xgboost_bohb():
                           ('min_child_weight',lower=1,upper=70,log=False))
     return cs
 
-
-
 def hyper_lightgbm_gs(): 
     cs={
         'max_depth': [10,20,30,40,50],
@@ -82,7 +78,15 @@ def hyper_lightgbm_rs():
         'bagging_fraction':list(np.linspace(0.1,1,100))
     }
     return cs 
-
+# def hyper_xgboost_rs():
+#     cs={
+#         'eta': loguniform(1e-5,1),
+#         'subsample': uniform(0.1,0.9),
+#         'max_depth':list(range(1,99)),
+#         'gamma': uniform(0.001,1.999),
+#         'min_child_weight': uniform(1,69)
+#     }
+#     return cs 
 def hyper_lightgbm_bo():
     cs={
         'max_depth': Integer(1,100,'uniform'),
@@ -106,9 +110,6 @@ def hyper_lightgbm_bohb(benih):
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
                           ('bagging_fraction',lower=0.1,upper=1,log=False))
     return cs 
-
-
-
 
 def hyper_catboost_gs():
     cs={
