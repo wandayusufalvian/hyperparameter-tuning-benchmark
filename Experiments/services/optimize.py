@@ -66,14 +66,14 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
 
     return [search.cv_results_,search.best_index_,end_time-start_time]
 
-def optimized_bohb(X,y,model,parameter,iter):
+def optimized_bohb(X,y,model,parameter,resources,iter):
     start_time = time.time()
     search= HpBandSterSearchCV(
                    model, 
                    parameter, 
                    n_jobs=-1, 
-                   n_iter=iter, # bisa diubah2 untuk lihat apakah mempengaruhi hasil 
-                   resource_name='n_samples', # bisa diganti n_estimator
+                   n_iter=iter, # beda dengan iterasi pada random dan bayes search
+                   resource_name=resources, # bisa diganti n_estimator
                    scoring=eval_method,
                    cv=5,
                    verbose= 0

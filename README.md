@@ -25,9 +25,14 @@ dataset :
 experiments:
 - experiment_1_xgboost_bank_default.py [done]
 - experiment_2_xgboost_bank_gridsearch.py [done]
-- experiment_3_xgboost_bank_randomsearch.py 
-- experiment_4_xgboost_bank_bayessearch.py
-- experiment_5_xgboost_bank_bohb.py
+- experiment_3_xgboost_bank_randomsearch.py [done]
+- experiment_4_xgboost_bank_bayessearch.py [done]
+- experiment_5_1_xgboost_bank_bohb.py
+  => memperlihatkan bahwa nilai seed tidak berpengaruh besar 
+- experiment_5_2_xgboost_bank_bohb.py
+  => variasi nilai n_iter. resources='n_samples'
+- experiment_5_3_xgboost_bank_bohb.py
+  => variasi nilai n_iter. resources='n_estimators'
 - experiment_6_lightgbm_bank_default.py 
 - experiment_7_lightgbm_bank_gridsearch.py
 - experiment_8_lightgbm_bank_randomsearch.py
