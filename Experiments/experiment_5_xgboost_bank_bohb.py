@@ -3,7 +3,7 @@ import services.gbdt as gbdt
 import services.optimize as opt 
 import services.hyperparameter as hyper
 
-iterations=[5]
+iterations=[10]
 resources='n_samples'
 # jika resources n_estimators maka pasti harus set nilai max_resources 
 # untuk n_samples sepertinya juga harus divariasikan nilai max_resources karena
