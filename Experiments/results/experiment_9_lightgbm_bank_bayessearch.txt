@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "experiment_9.py", line 4, in <module>
+    import services.optimize as opt 
+  File "/home/m448735/hyperparameter-tuning-benchmark/Experiments/services/optimize.py", line 7, in <module>
+    from hpbandster_sklearn import HpBandSterSearchCV
+ModuleNotFoundError: No module named 'hpbandster_sklearn'
+srun: error: komputasi06: task 0: Exited with exit code 1
