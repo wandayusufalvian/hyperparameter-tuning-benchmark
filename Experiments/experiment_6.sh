@@ -8,4 +8,4 @@
 #SBATCH --nodelist=komputasi06
 
 source /home/m448735/anaconda3/bin/activate
-srun python experiment_6_lightgbm_bank_default.py
+srun python experiment_6.py

@@ -8,4 +8,4 @@
 #SBATCH --nodelist=komputasi04
 
 source /home/m448735/anaconda3/bin/activate
-srun python experiment_4_xgboost_bank_bayessearch.py
+srun python experiment_4.py

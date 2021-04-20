@@ -8,4 +8,4 @@
 #SBATCH --nodelist=komputasi06
 
 source /home/m448735/anaconda3/bin/activate
-srun python experiment_1_xgboost_bank_default.py
+srun python experiment_1.py
