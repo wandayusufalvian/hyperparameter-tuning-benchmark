@@ -14,16 +14,7 @@ def hyper_xgboost_gs():
         'min_child_weight':[2,5,7,11,15]
     }
     return cs
-# def hyper_xgboost_rs():
-#     cs={
-#         'eta': list(np.logspace
-#                     (-3,0,base=10,num=1000)), #float 
-#         'subsample': list(np.linspace(0.1,1,100)), # float 
-#         'max_depth':list(range(1,101)), # int
-#         'gamma':list(np.linspace(0.001,2,100)), # float
-#         'min_child_weight':list(np.linspace(1,90,100)) # float 
-#     }
-#     return cs 
+
 def hyper_xgboost_rs():
     cs={
         'eta': loguniform(1e-5,1),
@@ -72,27 +63,18 @@ def hyper_lightgbm_rs():
     cs={
         'max_depth': list(range(1,101)),
         'min_data_in_leaf':list(range(1,101)),
-        'num_leaves': list(range(10,101)),
-        'learning_rate': list(np.logspace
-                            (np.log10(0.001),np.log10(1),base=10,num=1000)),
-        'bagging_fraction':list(np.linspace(0.1,1,100))
+        'num_leaves': list(range(1,101)),
+        'learning_rate': loguniform(1e-5,1),
+        'bagging_fraction':uniform(0.1,0.99) 
     }
     return cs 
-# def hyper_xgboost_rs():
-#     cs={
-#         'eta': loguniform(1e-5,1),
-#         'subsample': uniform(0.1,0.9),
-#         'max_depth':list(range(1,99)),
-#         'gamma': uniform(0.001,1.999),
-#         'min_child_weight': uniform(1,69)
-#     }
-#     return cs 
+
 def hyper_lightgbm_bo():
     cs={
         'max_depth': Integer(1,100,'uniform'),
         'min_data_in_leaf': Integer(1,100,'uniform'),
-        'num_leaves': Integer(10,100,'uniform'),
-        'learning_rate': Real(0.001,1,'log-uniform'),
+        'num_leaves': Integer(1,100,'uniform'),
+        'learning_rate': Real(1e-5,1,'log-uniform'),
         'bagging_fraction':Real(0.1,1,'uniform')    
     }
     return cs 
@@ -106,7 +88,7 @@ def hyper_lightgbm_bohb(benih):
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
                           ('num_leaves',lower=1,upper=100,log=False))
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
-                          ('learning_rate',lower=0.001,upper=1,log=True))
+                          ('learning_rate',lower=1e-5,upper=1,log=True))
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
                           ('bagging_fraction',lower=0.1,upper=1,log=False))
     return cs 
