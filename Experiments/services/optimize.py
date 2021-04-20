@@ -4,7 +4,7 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import GridSearchCV
 from skopt import BayesSearchCV
-from hpbandster_sklearn import HpBandSterSearchCV
+#from hpbandster_sklearn import HpBandSterSearchCV
 import time
 
 skf=StratifiedKFold(n_splits=5)
@@ -65,22 +65,22 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
 
     return [search.cv_results_,search.best_index_,end_time-start_time]
 
-def optimized_bohb(X,y,model,parameter,iter,rsc,rsc_type,min_rsc,max_rsc):
-    start_time = time.time()
-    search= HpBandSterSearchCV(
-                   model, 
-                   parameter, 
-                   n_jobs=-1, 
-                   n_iter=iter, # beda dengan iterasi pada random dan bayes search
-                   resource_name=rsc, # n_samples or n_estimator
-                   resource_type=rsc_type,
-                   scoring=eval_method,
-                   min_budget=min_rsc,
-                   max_budget=max_rsc,
-                   cv=5,
-                   verbose= 0
-    )
-    search.fit(X,y)
-    end_time = time.time()
+# def optimized_bohb(X,y,model,parameter,iter,rsc,rsc_type,min_rsc,max_rsc):
+#     start_time = time.time()
+#     search= HpBandSterSearchCV(
+#                    model, 
+#                    parameter, 
+#                    n_jobs=-1, 
+#                    n_iter=iter, # beda dengan iterasi pada random dan bayes search
+#                    resource_name=rsc, # n_samples or n_estimator
+#                    resource_type=rsc_type,
+#                    scoring=eval_method,
+#                    min_budget=min_rsc,
+#                    max_budget=max_rsc,
+#                    cv=5,
+#                    verbose= 0
+#     )
+#     search.fit(X,y)
+#     end_time = time.time()
 
-    return [search.cv_results_,search.best_index_,end_time-start_time]
+#     return [search.cv_results_,search.best_index_,end_time-start_time]
