@@ -65,7 +65,7 @@ def hyper_lightgbm_rs():
         'min_data_in_leaf':list(range(1,101)),
         'num_leaves': list(range(1,101)),
         'learning_rate': loguniform(1e-5,1),
-        'bagging_fraction':uniform(0.1,0.99) 
+        'bagging_fraction':uniform(0.1,0.90) 
     }
     return cs 
 
