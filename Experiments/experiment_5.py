@@ -7,11 +7,11 @@ import services.hyperparameter as hyper
 # untuk n_samples sepertinya juga harus divariasikan nilai max_resources karena
 # ketika run sekali menggunakan n_samples dan default max_resources(all)=>telralu lama 
 
-iterations=[10]
+iterations=[3]
 resources='n_samples'
-resources_type=float 
-min_resources=0.3
-max_resources=1.0
+resources_type=int 
+min_resources=None
+max_resources=None
 
 for iter in iterations:
     X,y=data.baca_data_bank()
