@@ -59,7 +59,6 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
                    cv=5,
                    random_state=seed,
                    verbose= 0
-                   #iid=True 
     )
     search.fit(X,y)
     end_time = time.time()
