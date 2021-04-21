@@ -1,0 +1,2 @@
+experiment_8_1 dan experiment_9_1 menggunakan hyperparameter : hyper_lightgbm_rs dan hyper_lightgbm_bo
+experiment_8_2 dan experiment_9_2 menggunakan hyperparameter : hyper_lightgbm_rs_2 dan hyper_lightgbm_bo_2

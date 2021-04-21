@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=experiment_9
-#SBATCH --output=results/experiment_9_lightgbm_bank_bayessearch.txt
+#SBATCH --output=results/experiment_9_2.txt
 #
 #SBATCH --time=11:59:00
 #SBATCH --nodes=1

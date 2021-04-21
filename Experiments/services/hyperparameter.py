@@ -79,6 +79,36 @@ def hyper_lightgbm_bo():
     }
     return cs 
 
+def hyper_lightgbm_gs_2(): 
+    cs={
+        'max_depth': [5,30,50,70,90],
+        'scale_pos_weight': [3,5,7,9,14],
+        'num_leaves': [30,400],
+        'bagging_fraction': [0.45,0.55],
+        'colsample_bytree': [0.45,0.55]
+    }
+    return cs 
+
+def hyper_lightgbm_rs_2():
+    cs={
+        'max_depth': list(range(2,101)),
+        'scale_pos_weight': uniform(1,19),
+        'num_leaves': list(range(10,1001)),
+        'bagging_fraction': uniform(0.4,0.6),
+        'colsample_bytree':uniform(0.4,0.6)    
+    }
+    return cs 
+
+def hyper_lightgbm_bo_2():
+    cs={
+        'max_depth': Integer(2,100,'uniform'),
+        'scale_pos_weight': Real(1,20,'uniform'),
+        'num_leaves': Integer(10,1000,'uniform'),
+        'bagging_fraction': Real(0.4,1,'uniform'),
+        'colsample_bytree':Real(0.4,1,'uniform')    
+    }
+    return cs 
+
 def hyper_lightgbm_bohb(benih):
     cs = CS.ConfigurationSpace(seed=benih)
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter

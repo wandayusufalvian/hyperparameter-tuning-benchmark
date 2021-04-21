@@ -4,6 +4,7 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import GridSearchCV
 from skopt import BayesSearchCV
+from skopt.callbacks import DeltaXStopper
 #from hpbandster_sklearn import HpBandSterSearchCV
 import time
 
@@ -60,7 +61,25 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
                    random_state=seed,
                    verbose= 0
     )
-    search.fit(X,y)
+    search.fit(X,y,callback=DeltaXStopper(0.0001))
+    end_time = time.time()
+
+    return [search.cv_results_,search.best_index_,end_time-start_time]
+
+def optimized_bayesian_search_2(X,y,model,parameter,seed):
+    start_time = time.time()
+    search= BayesSearchCV(
+                   model, 
+                   parameter, 
+                   n_jobs=-1, 
+                   n_iter=200,
+                   scoring=eval_method,
+                   cv=5,
+                   random_state=seed,
+                   verbose= 0,
+                   optimizer_kwargs={'base_estimator': 'GP'}
+    )
+    search.fit(X,y,callback=DeltaXStopper(0.0001))
     end_time = time.time()
 
     return [search.cv_results_,search.best_index_,end_time-start_time]

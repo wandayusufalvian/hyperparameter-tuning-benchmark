@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=experiment_7
-#SBATCH --output=results/experiment_7_lightgbm_bank_gridsearch.txt
+#SBATCH --output=results/experiment_7_2.txt
 #
 #SBATCH --time=11:59:00
 #SBATCH --nodes=1
