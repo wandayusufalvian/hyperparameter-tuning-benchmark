@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH --job-name=experiment_1
-#SBATCH --output=results/experiment_1_xgboost_bank_default.txt
+#SBATCH --job-name=node_1
+#SBATCH --output=results/experiment_11_catboost_bank_default.txt
 #
 #SBATCH --time=30:00
 #SBATCH --nodes=1
 #SBATCH --nodelist=komputasi06
 
 source /home/m448735/anaconda3/bin/activate
-srun python experiment_1.py
+srun python node_1.py
