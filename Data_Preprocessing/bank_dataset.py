@@ -7,7 +7,7 @@ from service import *
 #%%
 '''baca file'''  
 data_bank=pd.read_csv(r"/home/yusuf/hyperparameter-tuning-benchmark/Data_Preprocessing/dataset-raw/bank-full.csv",sep=';')
-data_bank.info()
+# data_bank.info()
 
 #%%
 '''hapus kolom duration'''
@@ -16,7 +16,7 @@ data_bank=data_bank.drop(['duration'],axis=1)
 
 #%% 
 '''banyak nilai kategori di tiap fitur kategorikal''' 
-banyak_tiap_kategori(data_bank)
+# banyak_tiap_kategori(data_bank)
 
 #%% 
 '''ubah nilai unknown menjadi nilai yang paling sering muncul'''
@@ -39,6 +39,7 @@ data_bank['month']=data_bank['month'].replace(['jan','feb','mar','apr','may','ju
 data_bank['month']=data_bank['month'].replace(['jul','aug','sep','oct','nov','dec'],'semester-2')
 
 #%%
+## untuk catboost ini tidak perlu dilakukan...
 '''label encoding pada fitur education'''
 kategori=['primary','secondary','tertiary']
 label=[1,2,3]
@@ -47,20 +48,21 @@ data_bank['education']=data_bank['education'].replace(kategori,label)
 #%%
 '''dimensi data sebelum transformasi'''
 X,y=pisah_x_y(data_bank)
-print("before transform")
-print("y= ",y.shape)
-print("X= ",X.shape)
+# print("before transform")
+# print("y= ",y.shape)
+# print("X= ",X.shape)
 #%%
 '''transformasi data'''
 numerical_minmax=['age','balance','day','campaign','pdays','previous']
 categorical_onehot=['job','marital','default','housing','loan','contact','month']
 y=transform_kelas(y)
-X=transform_fitur(X,numerical_minmax,categorical_onehot)
+X=transform_fitur(X,numerical_minmax,categorical_onehot) # xgboost dan lightgbm
+#X=transform_fitur_catboost(X,numerical_minmax) # catboost
 
 #%%
-print("dimensi data setelah transformasi")
-print("y= ",y.shape)
-print("X= ",X.shape)
+# print("dimensi data setelah transformasi")
+# print("y= ",y.shape)
+# print("X= ",X.shape)
 
 #%%
 '''export data'''

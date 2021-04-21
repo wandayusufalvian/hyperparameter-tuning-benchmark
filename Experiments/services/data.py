@@ -38,7 +38,7 @@ def simpan_hasil_local(name,hasil):
         f.close()
     # untuk optimized hyperparameter
     else:
-        f=open(save_path,'w')
+        f=open(save_path,'a+')
         kunci=hasil[0].keys()
         best_index=hasil[1]
         for i in kunci:

@@ -9,4 +9,5 @@ for i in range(0,iterasi):
     model=gbdt.xgboost_model()
     hasil=opt.default_hyperparameter(X,y,model)
     print("Iterasi ke-"+str(i+1)+"\n")
-    data.simpan_hasil_hpc(hasil)
+    #data.simpan_hasil_hpc(hasil)
+    data.simpan_hasil_local("experiment_1_2",hasil)

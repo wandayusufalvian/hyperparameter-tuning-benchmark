@@ -27,6 +27,12 @@ def transform_fitur(X,numerical_col,categorical_onehot):
     X=col_transform.fit_transform(X)
     return X
 
+def transform_fitur_catboost(X,numerical_col):
+    t = [('num', MinMaxScaler(), numerical_col)]
+    col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
+    X=col_transform.fit_transform(X)
+    return X
+
 def ekspor_data(X,y,nama_X,nama_y):
     X=pd.DataFrame(X)
     y=pd.DataFrame(y)

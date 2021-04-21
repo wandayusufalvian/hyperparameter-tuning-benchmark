@@ -8,4 +8,4 @@
 #SBATCH --nodelist=komputasi06
 
 source /home/m448735/anaconda3/bin/activate
-srun python experiment_2_xgboost_bank_gridsearch.py
+srun python experiment_2.py
