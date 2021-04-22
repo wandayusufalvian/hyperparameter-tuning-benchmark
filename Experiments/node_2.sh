@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=node_2
-#SBATCH --output=results/experiment_2_xgboost_bank_gridsearch.txt
+#SBATCH --output=results/experiment_12_catboost_bank_gridsearch.txt
 #
 #SBATCH --time=11:59:00
 #SBATCH --nodes=1

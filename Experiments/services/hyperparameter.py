@@ -109,8 +109,7 @@ def hyper_lightgbm_bo_2():
     }
     return cs 
 
-def hyper_lightgbm_bohb(benih):
-    cs = CS.ConfigurationSpace(seed=benih)
+def hyper_lightgbm_bohb():
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
                           ('max_depth',lower=1,upper=100,log=False))
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
