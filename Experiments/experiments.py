@@ -123,14 +123,14 @@ def exp_11():
         X,y=data.baca_data_bank_catboost()
         model=gbdt.catboost_model()
         hasil=opt.default_hyperparameter(X,y,model)
-        print("Iterasi ke-"+str(i+1)+"\n")
+        print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
         data.simpan_hasil_hpc(hasil)
 
 def exp_12():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
     model=gbdt.catboost_model()
-    parameter=hyper.hyper_xgboost_gs()
+    parameter=hyper.hyper_catboost_gs()
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 

@@ -10,4 +10,4 @@ def lightgbm_model():
     return LGBMClassifier()
 
 def catboost_model():
-    return CatBoostClassifier()
+    return CatBoostClassifier(logging_level='Silent')
