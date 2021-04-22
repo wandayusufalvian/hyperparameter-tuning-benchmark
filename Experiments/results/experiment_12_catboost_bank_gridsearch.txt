@@ -1,0 +1,617 @@
+Traceback (most recent call last):
+  File "node_2.py", line 3, in <module>
+    experiments.exp_12()
+  File "/home/m448735/hyperparameter-tuning-benchmark/Experiments/experiments.py", line 134, in exp_12
+    hasil=opt.optimized_grid_search(X,y,model,parameter)
+  File "/home/m448735/hyperparameter-tuning-benchmark/Experiments/services/optimize.py", line 31, in optimized_grid_search
+    search.fit(X,y)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_search.py", line 761, in fit
+    self.best_estimator_ = clone(clone(base_estimator).set_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/base.py", line 88, in clone
+    new_object = klass(**new_object_params)
+TypeError: __init__() got an unexpected keyword argument 'gamma'
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.001"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py:548: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 4539, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1904, in _fit
+    train_params = self._prepare_train_params(
+  File "/home/m448735/anaconda3/lib/python3.8/site-packages/catboost/core.py", line 1836, in _prepare_train_params
+    _check_train_params(params)
+  File "_catboost.pyx", line 5561, in _catboost._check_train_params
+  File "_catboost.pyx", line 5580, in _catboost._check_train_params
+_catboost.CatBoostError: catboost/private/libs/options/plain_options_helper.cpp:495: Unknown option {gamma} with value "0.4"
+
+  warnings.warn("Estimator fit failed. The score on this train-test"
+srun: error: komputasi04: task 0: Exited with exit code 1
