@@ -29,9 +29,9 @@ experiments:
 - experiment_4_xgboost_bank_bayessearch.py [done]
 - experiment_5_xgboost_bank_bohb.py
 - experiment_6_lightgbm_bank_default.py [done]
-- experiment_7_lightgbm_bank_gridsearch.py
-- experiment_8_lightgbm_bank_randomsearch.py
-- experiment_9_lightgbm_bank_bayessearch.py
+- experiment_7_lightgbm_bank_gridsearch.py [done]
+- experiment_8_lightgbm_bank_randomsearch.py [done]
+- experiment_9_lightgbm_bank_bayessearch.py [done]
 - experiment_10_lightgbm_bank_bohb.py
 - experiment_11_catboost_bank_default.py 
 - experiment_12_catboost_bank_gridsearch.py
