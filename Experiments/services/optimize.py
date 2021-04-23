@@ -61,7 +61,7 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
                    random_state=seed,
                    verbose= 0
     )
-    search.fit(X,y,callback=DeltaXStopper(0.0001))
+    search.fit(X,y)
     end_time = time.time()
 
     return [search.cv_results_,search.best_index_,end_time-start_time]

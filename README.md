@@ -33,8 +33,9 @@ experiments:
 - experiment_8_lightgbm_bank_randomsearch.py [done]
 - experiment_9_lightgbm_bank_bayessearch.py [done]
 - experiment_10_lightgbm_bank_bohb.py
-- experiment_11_catboost_bank_default.py [done]
-- experiment_12_catboost_bank_gridsearch.py [done]
-- experiment_13_catboost_bank_randomsearch.py
+- experiment_11_catboost_bank_default.py 
+- experiment_12_catboost_bank_gridsearch.py 
+- experiment_13_catboost_bank_randomsearch.py 
 - experiment_14_catboost_bank_bayessearch.py
 - experiment_15_catboost_bank_bohb.py
+

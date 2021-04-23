@@ -56,15 +56,24 @@ X,y=pisah_x_y(data_bank)
 numerical_minmax=['age','balance','day','campaign','pdays','previous']
 categorical_onehot=['job','marital','default','housing','loan','contact','month']
 y=transform_kelas(y)
-X=transform_fitur(X,numerical_minmax,categorical_onehot) # xgboost dan lightgbm
+#X=transform_fitur(X,numerical_minmax,categorical_onehot) # xgboost dan lightgbm
+X=transform_fitur_catboost(X,numerical_minmax) # catboost
+X=pd.DataFrame(X)
+y=pd.DataFrame(y)
+# pembulatan hasil dari min max scaler 
+float_col=[0,1,2,3,4,5]
+pembulatan(X,float_col)
+
+
+
 
 
 #%%
-# print("dimensi data setelah transformasi")
-# print("y= ",y.shape)
-# print("X= ",X.shape)
+print("dimensi data setelah transformasi")
+print("y= ",y.shape)
+print("X= ",X.shape)
 
 #%%
 '''export data'''
-#ekspor_data(X,y,"X-bank","y-bank")
+ekspor_data(X,y,"X-bank-catboost2","y-bank")
 

@@ -27,6 +27,11 @@ def transform_fitur(X,numerical_col,categorical_onehot):
     X=col_transform.fit_transform(X)
     return X
 
+def pembulatan(X,float_col):
+    for i in float_col:
+        X[i]=X[i].astype(float)
+        X[i]=X[i].round(3)
+
 def transform_fitur_catboost(X,numerical_col):
     t = [('num', MinMaxScaler(), numerical_col)]
     col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
@@ -34,8 +39,6 @@ def transform_fitur_catboost(X,numerical_col):
     return X
 
 def ekspor_data(X,y,nama_X,nama_y):
-    X=pd.DataFrame(X)
-    y=pd.DataFrame(y)
     X.to_csv('dataset-ready/'+nama_X+'.csv',index=False,header=None)
     y.to_csv('dataset-ready/'+nama_y+'.csv',index=False,header=None)
 

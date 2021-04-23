@@ -135,11 +135,10 @@ def hyper_catboost_gs():
 def hyper_catboost_rs():
     cs={
         'max_depth': list(range(1,17)),
-        'learning_rate': list(np.logspace
-                            (np.log10(0.001),np.log10(1),base=10,num=1000)),
-        'l2_leaf_reg':list(np.linspace(1,50,100)),
-        'bagging_temperature':list(np.linspace(1,50,100)),
-        'random_strength':list(np.linspace(1,50,100))
+        'learning_rate': loguniform(0.001,1),
+        'l2_leaf_reg':uniform(1,49),
+        'bagging_temperature':uniform(1,49),
+        'random_strength':uniform(1,49)
     }
     return cs 
 
@@ -153,8 +152,8 @@ def hyper_catboost_bo():
     }
     return cs 
 
-def hyper_catboost_bohb(benih):
-    cs = CS.ConfigurationSpace(seed=benih)
+def hyper_catboost_bohb():
+    cs = CS.ConfigurationSpace()
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
                           ('max_depth',lower=1,upper=16,log=False))
     cs.add_hyperparameter(CSH.UniformFloatHyperparameter
