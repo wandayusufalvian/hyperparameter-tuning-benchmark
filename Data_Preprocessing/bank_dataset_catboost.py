@@ -60,9 +60,9 @@ y=transform_kelas(y)
 X=transform_fitur_catboost(X,numerical_minmax) # catboost
 X=pd.DataFrame(X)
 y=pd.DataFrame(y)
-# pembulatan hasil dari min max scaler 
-float_col=[0,1,2,3,4,5]
-pembulatan(X,float_col)
+# pembulatan hasil dari min max scaler => ternyata gk ada bedanya dibulatkan dengan tidak 
+#float_col=[0,1,2,3,4,5]
+#pembulatan(X,float_col)
 
 
 

@@ -10,7 +10,7 @@ def baca_data_bank():
     return X,y
 
 def baca_data_bank_catboost():
-    X_path=os.path.join(os.getcwd(),"dataset-ready","X-bank-catboost2.csv")
+    X_path=os.path.join(os.getcwd(),"dataset-ready","X-bank-catboost.csv")
     y_path=os.path.join(os.getcwd(),"dataset-ready","y-bank.csv")
     X=np.genfromtxt(X_path, delimiter=',')
     y=np.genfromtxt(y_path, delimiter=',')

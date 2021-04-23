@@ -127,8 +127,8 @@ def hyper_catboost_gs():
         'max_depth': [2,5,8,11,14],
         'learning_rate': [0.01,0.1],
         'l2_leaf_reg':[1,6,11,16,21],
-        'bagging_temperature':[0.5,20],
-        'random_strength':[0.5,20]
+        'bagging_temperature':[0.5,5],
+        'random_strength':[0.5,5]
     }
     return cs 
 
