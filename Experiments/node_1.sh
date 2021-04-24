@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #SBATCH --job-name=node_1
-#SBATCH --output=results/exp_12_2.txt
+#SBATCH --output=results/exp_13.txt
 #
-#SBATCH --time=11:59:00
+#SBATCH --time=23:59:00
 #SBATCH --nodes=1
 #SBATCH --nodelist=komputasi04
 

@@ -412,57 +412,45 @@ fig,axs=plt.subplots(5,2,figsize=(20,40))
 
 axs[0,0].scatter(x,auc_seed_1)
 axs[0,0].plot(x[best_indexes[0]],auc_seed_1[best_indexes[0]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[0,0].set_title("XGBoost + grid search (seed=1)")
+axs[0,0].set_title("XGBoost + random search (seed=1)")
 
 axs[0,1].scatter(x,auc_seed_12)
-axs[0,1].plot(x[best_indexes[1]],auc_seed_1[best_indexes[1]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[0,1].set_title("XGBoost + grid search (seed=12)")
+axs[0,1].plot(x[best_indexes[1]],auc_seed_12[best_indexes[1]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[0,1].set_title("XGBoost + random search (seed=12)")
 
 axs[1,0].scatter(x,auc_seed_22)
-axs[1,0].plot(x[best_indexes[2]],auc_seed_1[best_indexes[2]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[1,0].set_title("XGBoost + grid search (seed=22)")
+axs[1,0].plot(x[best_indexes[2]],auc_seed_22[best_indexes[2]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[1,0].set_title("XGBoost + random search (seed=22)")
 
 axs[1,1].scatter(x,auc_seed_32)
-axs[1,1].plot(x[best_indexes[3]],auc_seed_1[best_indexes[3]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[1,1].set_title("XGBoost + grid search (seed=32)")
+axs[1,1].plot(x[best_indexes[3]],auc_seed_32[best_indexes[3]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[1,1].set_title("XGBoost + random search (seed=32)")
 
 axs[2,0].scatter(x,auc_seed_42)
-axs[2,0].plot(x[best_indexes[4]],auc_seed_1[best_indexes[4]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[2,0].set_title("XGBoost + grid search (seed=42)")
+axs[2,0].plot(x[best_indexes[4]],auc_seed_42[best_indexes[4]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[2,0].set_title("XGBoost + random search (seed=42)")
 
 axs[2,1].scatter(x,auc_seed_52)
-axs[2,1].plot(x[best_indexes[5]],auc_seed_1[best_indexes[5]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[2,1].set_title("XGBoost + grid search (seed=52)")
+axs[2,1].plot(x[best_indexes[5]],auc_seed_52[best_indexes[5]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[2,1].set_title("XGBoost + random search (seed=52)")
 
 axs[3,0].scatter(x,auc_seed_62)
-axs[3,0].plot(x[best_indexes[6]],auc_seed_1[best_indexes[6]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[3,0].set_title("XGBoost + grid search (seed=62)")
+axs[3,0].plot(x[best_indexes[6]],auc_seed_62[best_indexes[6]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[3,0].set_title("XGBoost + random search (seed=62)")
 
 axs[3,1].scatter(x,auc_seed_72)
-axs[3,1].plot(x[best_indexes[7]],auc_seed_1[best_indexes[7]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[3,1].set_title("XGBoost + grid search (seed=72)")
+axs[3,1].plot(x[best_indexes[7]],auc_seed_72[best_indexes[7]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[3,1].set_title("XGBoost + random search (seed=72)")
 
 axs[4,0].scatter(x,auc_seed_82)
-axs[4,0].plot(x[best_indexes[8]],auc_seed_1[best_indexes[8]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[4,0].set_title("XGBoost + grid search (seed=82)")
+axs[4,0].plot(x[best_indexes[8]],auc_seed_82[best_indexes[8]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[4,0].set_title("XGBoost + random search (seed=82)")
 
 axs[4,1].scatter(x,auc_seed_92)
-axs[4,1].plot(x[best_indexes[9]],auc_seed_1[best_indexes[9]],marker='*',markersize=22,markerfacecolor='yellow')
-axs[4,1].set_title("XGBoost + grid search (seed=92)")
-
-
-
-
-
-
-
-
-
+axs[4,1].plot(x[best_indexes[9]],auc_seed_92[best_indexes[9]],marker='*',markersize=22,markerfacecolor='yellow')
+axs[4,1].set_title("XGBoost + random search (seed=92)")
 
 for ax in axs.flat:
     ax.set(xlabel='iterasi', ylabel='AUC')
-
-
-
 
 plt.show()

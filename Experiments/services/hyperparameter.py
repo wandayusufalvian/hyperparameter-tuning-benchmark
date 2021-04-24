@@ -132,33 +132,23 @@ def hyper_catboost_gs_1():
     }
     return cs 
 
-def hyper_catboost_gs():
-    cs={
-        'max_depth': [2,5,8,11,14],
-        'learning_rate': [0.01,0.1],
-        'l2_leaf_reg':[1, 3, 5, 7, 9],
-        'bagging_temperature':[0.5,5],
-        'random_strength':[0.5,5]
-    }
-    return cs 
-
 def hyper_catboost_rs():
     cs={
-        'max_depth': list(range(1,17)),
+        'max_depth': list(range(1,30)),
         'learning_rate': loguniform(0.001,1),
-        'l2_leaf_reg':uniform(1,49),
-        'bagging_temperature':uniform(1,49),
-        'random_strength':uniform(1,49)
+        'l2_leaf_reg':uniform(1,29),
+        'bagging_temperature':uniform(0.1,9.9),
+        'random_strength':uniform(0.1,9.9)
     }
     return cs 
 
 def hyper_catboost_bo():
     cs={
-        'max_depth': Integer(1,16,'uniform'),
+        'max_depth': Integer(1,30,'uniform'),
         'learning_rate': Real(0.001,1,'log-uniform'),
-        'l2_leaf_reg': Real(1,50,'uniform'),
-        'bagging_temperature':Real(1,50,'uniform'),
-        'random_strength':Real(1,50,'uniform')
+        'l2_leaf_reg': Real(1,30,'uniform'),
+        'bagging_temperature':Real(0.1,10,'uniform'),
+        'random_strength':Real(0.1,10,'uniform')
     }
     return cs 
 
