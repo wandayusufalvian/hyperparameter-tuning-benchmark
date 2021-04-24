@@ -7,3 +7,4 @@ solusi : mengikuti instruksi dari https://catboost.ai/docs/concepts/speed-up-tra
 
 # exp_12 vs exp_12_2
 
+run 
