@@ -142,27 +142,12 @@ def exp_12_1():
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 
-
-
-def exp_13_1():
+def exp_13():
     # experiment_13_catboost_bank_randomsearch
-    # 
     seeds=[1,12,22,32,42,52,62,72,82,92]
     for seed in seeds:
         X,y=data.baca_data_bank_catboost()
-        model=gbdt.catboost_model()
-        parameter=hyper.hyper_catboost_rs()
-        hasil=opt.optimized_random_search(X,y,model,parameter,seed)
-        print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
-        data.simpan_hasil_hpc(hasil)
-
-def exp_13_2():
-    # experiment_13_catboost_bank_randomsearch
-    # 
-    seeds=[1,12,22,32,42,52,62,72,82,92]
-    for seed in seeds:
-        X,y=data.baca_data_bank_catboost()
-        model=gbdt.catboost_model()
+        model=gbdt.catboost_model_2()
         parameter=hyper.hyper_catboost_rs()
         hasil=opt.optimized_random_search(X,y,model,parameter,seed)
         print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
@@ -173,7 +158,7 @@ def exp_14():
     seeds=[1,12,22,32,42,52,62,72,82,92]
     for seed in seeds:
         X,y=data.baca_data_bank_catboost()
-        model=gbdt.catboost_model()
+        model=gbdt.catboost_model_2()
         parameter=hyper.hyper_catboost_bo()
         hasil=opt.optimized_bayesian_search(X,y,model,parameter,seed)
         print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
