@@ -126,17 +126,29 @@ def exp_11():
         print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
         data.simpan_hasil_hpc(hasil)
 
+def exp_11_2():
+    # experiment_11_catboost_bank_default
+    # pakai model catboost yang beda => harapannya bisa lebih cepat dari exp_11()
+    iterasi=10
+    for i in range(0,iterasi):
+        X,y=data.baca_data_bank_catboost()
+        model=gbdt.catboost_model_2()
+        hasil=opt.default_hyperparameter(X,y,model)
+        print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
+        data.simpan_hasil_hpc(hasil)
+
 def exp_12():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
     model=gbdt.catboost_model()
-    parameter=hyper.hyper_catboost_gs()
+    parameter=hyper.hyper_catboost_gs_1()
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 
 
 def exp_13_1():
     # experiment_13_catboost_bank_randomsearch
+    # 
     seeds=[1,12,22,32,42,52,62,72,82,92]
     for seed in seeds:
         X,y=data.baca_data_bank_catboost()
@@ -148,6 +160,7 @@ def exp_13_1():
 
 def exp_13_2():
     # experiment_13_catboost_bank_randomsearch
+    # 
     seeds=[1,12,22,32,42,52,62,72,82,92]
     for seed in seeds:
         X,y=data.baca_data_bank_catboost()

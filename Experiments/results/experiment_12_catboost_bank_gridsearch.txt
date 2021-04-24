@@ -1,5 +1,0 @@
-/home/m448735/anaconda3/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py:688: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
-  warnings.warn(
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 6531.0 ON komputasi04 CANCELLED AT 2021-04-24T02:34:39 DUE TO TIME LIMIT ***
-slurmstepd: error: *** JOB 6531 ON komputasi04 CANCELLED AT 2021-04-24T02:34:39 DUE TO TIME LIMIT ***

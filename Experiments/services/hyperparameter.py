@@ -122,11 +122,21 @@ def hyper_lightgbm_bohb():
                           ('bagging_fraction',lower=0.1,upper=1,log=False))
     return cs 
 
-def hyper_catboost_gs():
+def hyper_catboost_gs_1():
+    cs={
+        'max_depth': [2],
+        'learning_rate': [0.01,0.1],
+        'l2_leaf_reg':[1],
+        'bagging_temperature':[0.5,5],
+        'random_strength':[0.5,5]
+    }
+    return cs 
+
+def hyper_catboost_gs_2():
     cs={
         'max_depth': [2,5,8,11,14],
         'learning_rate': [0.01,0.1],
-        'l2_leaf_reg':[1,6,11,16,21],
+        'l2_leaf_reg':[1, 3, 5, 7, 9],
         'bagging_temperature':[0.5,5],
         'random_strength':[0.5,5]
     }

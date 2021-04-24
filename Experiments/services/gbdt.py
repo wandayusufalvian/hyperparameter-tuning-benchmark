@@ -11,3 +11,6 @@ def lightgbm_model():
 
 def catboost_model():
     return CatBoostClassifier(logging_level='Silent')
+
+def catboost_model_2():
+    return CatBoostClassifier(logging_level='Silent',iterations=500,boosting_type='Plain',rsm=0.1,max_ctr_complexity=2,)
