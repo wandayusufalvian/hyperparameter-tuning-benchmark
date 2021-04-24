@@ -126,12 +126,11 @@ def exp_11():
         hasil=opt.default_hyperparameter(X,y,model)
         print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
         data.simpan_hasil_hpc(hasil)
-
 def exp_12():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
     model=gbdt.catboost_model_2()
-    parameter=hyper.hyper_catboost_gs_1()
+    parameter=hyper.hyper_catboost_gs()
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 
@@ -139,9 +138,11 @@ def exp_12_1():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
     model=gbdt.catboost_model_2()
-    parameter=hyper.hyper_catboost_gs()
+    parameter=hyper.hyper_catboost_gs_1()
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
+
+
 
 def exp_13_1():
     # experiment_13_catboost_bank_randomsearch

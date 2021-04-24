@@ -124,7 +124,7 @@ def hyper_lightgbm_bohb():
 
 def hyper_catboost_gs_1():
     cs={
-        'max_depth': [2],
+        'max_depth': [2,5],
         'learning_rate': [0.01,0.1],
         'l2_leaf_reg':[1],
         'bagging_temperature':[0.5,5],

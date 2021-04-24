@@ -70,3 +70,5 @@ best_param: {'bagging_temperature': 0.5, 'l2_leaf_reg': 1, 'learning_rate': 0.01
 
 total time : 438.46717500686646 seconds
 
+# hanya ada 8 konfigurasi yang diuji. kalau satu konfigurasi butuh waktu 7 detik. kenapa 
+8 konfigurasi butuh 438 detik? harusnya kan sekitar 64 detik 
