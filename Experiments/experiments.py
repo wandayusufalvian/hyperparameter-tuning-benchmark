@@ -118,16 +118,6 @@ def exp_10():
 
 def exp_11():
     # experiment_11_catboost_bank_default
-    iterasi=10
-    for i in range(0,iterasi):
-        X,y=data.baca_data_bank_catboost()
-        model=gbdt.catboost_model()
-        hasil=opt.default_hyperparameter(X,y,model)
-        print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
-        data.simpan_hasil_hpc(hasil)
-
-def exp_11_2():
-    # experiment_11_catboost_bank_default
     # pakai model catboost yang beda => harapannya bisa lebih cepat dari exp_11()
     iterasi=10
     for i in range(0,iterasi):
@@ -140,8 +130,16 @@ def exp_11_2():
 def exp_12():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
-    model=gbdt.catboost_model()
+    model=gbdt.catboost_model_2()
     parameter=hyper.hyper_catboost_gs_1()
+    hasil=opt.optimized_grid_search(X,y,model,parameter)
+    data.simpan_hasil_hpc(hasil)
+
+def exp_12_1():
+    # experiment_12_catboost_bank_gridsearch
+    X,y=data.baca_data_bank_catboost()
+    model=gbdt.catboost_model_2()
+    parameter=hyper.hyper_catboost_gs()
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 
