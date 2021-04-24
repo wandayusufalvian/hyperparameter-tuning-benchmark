@@ -145,7 +145,6 @@ def exp_12():
     hasil=opt.optimized_grid_search(X,y,model,parameter)
     data.simpan_hasil_hpc(hasil)
 
-
 def exp_13_1():
     # experiment_13_catboost_bank_randomsearch
     # 

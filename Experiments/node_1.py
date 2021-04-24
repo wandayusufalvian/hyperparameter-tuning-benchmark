@@ -1,3 +1,3 @@
 import experiments 
 
-experiments.exp_11()
+experiments.exp_11_2()
