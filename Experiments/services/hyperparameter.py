@@ -134,7 +134,7 @@ def hyper_catboost_gs_1():
 
 def hyper_catboost_rs():
     cs={
-        'max_depth': list(range(1,30)),
+        'max_depth': list(range(1,15)),
         'learning_rate': loguniform(0.001,1),
         'l2_leaf_reg':uniform(1,29),
         'bagging_temperature':uniform(0.1,9.9),
@@ -144,7 +144,7 @@ def hyper_catboost_rs():
 
 def hyper_catboost_bo():
     cs={
-        'max_depth': Integer(1,30,'uniform'),
+        'max_depth': Integer(1,15,'uniform'),
         'learning_rate': Real(0.001,1,'log-uniform'),
         'l2_leaf_reg': Real(1,30,'uniform'),
         'bagging_temperature':Real(0.1,10,'uniform'),
