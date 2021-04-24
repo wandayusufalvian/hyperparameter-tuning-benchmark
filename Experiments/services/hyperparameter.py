@@ -132,7 +132,7 @@ def hyper_catboost_gs_1():
     }
     return cs 
 
-def hyper_catboost_gs_2():
+def hyper_catboost_gs():
     cs={
         'max_depth': [2,5,8,11,14],
         'learning_rate': [0.01,0.1],
