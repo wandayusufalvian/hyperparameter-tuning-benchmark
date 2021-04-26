@@ -112,6 +112,18 @@ def exp_9():
         hasil=opt.optimized_bayesian_search_2(X,y,model,parameter,seed)
         print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
         data.simpan_hasil_hpc(hasil)
+def exp_9_1():
+    # run ulang yang seed =22 karena pada exp_9 iterasi tidak sampai 200 sehingga gk fair dengan exp yg lain 
+    # solusinya = jangan pakai bayes search yg ada stopping nya 
+    seeds=[22]
+
+    for seed in seeds:
+        X,y=data.baca_data_bank()
+        model=gbdt.lightgbm_model()
+        parameter=hyper.hyper_lightgbm_bo_2()
+        hasil=opt.optimized_bayesian_search(X,y,model,parameter,seed)
+        print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
+        data.simpan_hasil_hpc(hasil)
 
 def exp_10():
     return 0
@@ -126,15 +138,8 @@ def exp_11():
         hasil=opt.default_hyperparameter(X,y,model)
         print("======================================Iterasi ke-"+str(i+1)+"================================================"+"\n")
         data.simpan_hasil_hpc(hasil)
-def exp_12():
-    # experiment_12_catboost_bank_gridsearch
-    X,y=data.baca_data_bank_catboost()
-    model=gbdt.catboost_model_2()
-    parameter=hyper.hyper_catboost_gs()
-    hasil=opt.optimized_grid_search(X,y,model,parameter)
-    data.simpan_hasil_hpc(hasil)
 
-def exp_12_1():
+def exp_12():
     # experiment_12_catboost_bank_gridsearch
     X,y=data.baca_data_bank_catboost()
     model=gbdt.catboost_model_2()
