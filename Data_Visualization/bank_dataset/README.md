@@ -1,0 +1,1 @@
+yg grafik lineplot tidak jadi dipake karena banyak nilainya mirip sehingga tabrakan dan gk jelas 
