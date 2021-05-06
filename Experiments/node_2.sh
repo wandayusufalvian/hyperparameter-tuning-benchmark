@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=node_2
-#SBATCH --output=results/exp_14.txt
+#SBATCH --output=temp_result/exp_14.txt
 #
 #SBATCH --time=23:59:00
 #SBATCH --nodes=1

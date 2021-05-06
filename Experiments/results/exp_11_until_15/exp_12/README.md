@@ -1,1 +1,0 @@
-exp_12 dan exp_12_1 hanya coba2 aja untuk lihat sebenarnya seberapa lama catboost dengan grid karena sebelumnya lama banget 
