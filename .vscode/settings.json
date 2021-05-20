@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/yusuf/anaconda3/bin/python",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    }
+}

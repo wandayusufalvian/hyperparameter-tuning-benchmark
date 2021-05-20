@@ -3,11 +3,42 @@ import services.reader_writer as reader_writer
 import services.models as gbdt
 import services.hyperparameter as hyper
 
-# xgboost + .... + .... 
+
+# exp 16  
+
+print("experiment 16 : xgboost + dataset 2 + default hyperparameter"+"\n")
 
 experiments.exp_default(
-                        dataset=reader_writer.baca_data_bank(),
-                        mesin=1,
-                        file_name="exp_6_lightgbm_dataset1_default",
-                        iterasi=1,
+                        dataset=reader_writer.baca_data_cus_seg(),
+                        mesin=0,
+                        file_name="--",
+                        iterasi=10,
+                        model=gbdt.xgboost_model())
+
+print("\n")
+
+# exp 21 : 
+
+print("experiment 21 : lightgbm + dataset 2 + default hyperparameter"+"\n")
+
+experiments.exp_default(
+                        dataset=reader_writer.baca_data_cus_seg(),
+                        mesin=0,
+                        file_name="--",
+                        iterasi=10,
                         model=gbdt.lightgbm_model())
+
+print("\n")
+
+# exp 26 :
+
+print("experiment 26 : catboost + dataset 2 + default hyperparameter"+"\n")
+
+experiments.exp_default(
+                        dataset=reader_writer.baca_data_cus_seg_catboost(),
+                        mesin=0,
+                        file_name="--",
+                        iterasi=10,
+                        model=gbdt.catboost_model_2())
+
+print("\n")

@@ -16,12 +16,24 @@ def baca_data_bank_catboost():
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
 
-def baca_data_credit():
-    X_path=os.path.join(os.getcwd(),"dataset-ready","X-credit.csv")
-    y_path=os.path.join(os.getcwd(),"dataset-ready","y-credit.csv")
+def baca_data_cus_seg():
+    X_path=os.path.join(os.getcwd(),"dataset-ready","X_cus_seg.csv")
+    y_path=os.path.join(os.getcwd(),"dataset-ready","y_cus_seg.csv")
     X=np.genfromtxt(X_path, delimiter=',')
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
+
+def baca_data_cus_seg_catboost():
+    X_path=os.path.join(os.getcwd(),"dataset-ready","X_cus_seg_catboost.csv")
+    y_path=os.path.join(os.getcwd(),"dataset-ready","y_cus_seg.csv")
+    X=np.genfromtxt(X_path, delimiter=',')
+    y=np.genfromtxt(y_path, delimiter=',')
+    return X,y
+
+
+
+
+
 
 def baca_data_census():
     X_path=os.path.join(os.getcwd(),"dataset-ready","X-census.csv")

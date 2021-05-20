@@ -3,6 +3,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.compose import ColumnTransformer
+import math
+
 
 def banyak_tiap_kategori(X):
     cat_df=X.select_dtypes(include='object')
@@ -56,3 +58,13 @@ def hitung_kategori(X):
 #         print(i,"=",len(X[i].unique())," kategori")
 #         sum=sum+len(X[i].unique())
 #     print("\n total kategori= ",sum)
+
+
+def balance_or_not(banyak_kelas, list_jumlah):
+    n=sum(list_jumlah)
+    H=0 
+    for i in list_jumlah:
+        H=H+(i/n)*math.log(i/n)
+    print(H)
+    return -H/math.log(banyak_kelas)
+

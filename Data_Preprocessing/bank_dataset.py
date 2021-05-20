@@ -7,7 +7,7 @@ from service import *
 #%%
 '''baca file'''  
 data_bank=pd.read_csv(r"/home/yusuf/hyperparameter-tuning-benchmark/Data_Preprocessing/dataset-raw/bank-full.csv",sep=';')
-# data_bank.info()
+data_bank.info()
 
 #%%
 '''hapus kolom duration'''

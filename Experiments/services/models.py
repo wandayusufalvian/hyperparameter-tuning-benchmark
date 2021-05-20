@@ -10,6 +10,7 @@ def lightgbm_model():
     return LGBMClassifier()
 
 def catboost_model():
+    # udah gk dipake karena run nya terlalu lama 
     return CatBoostClassifier(logging_level='Silent')
 
 def catboost_model_2():

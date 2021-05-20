@@ -49,35 +49,6 @@ def hyper_xgboost_bohb():
                           ('min_child_weight',lower=1,upper=70,log=False))
     return cs
 
-def hyper_lightgbm_gs(): 
-    cs={
-        'max_depth': [10,20,30,40,50],
-        'min_data_in_leaf':[10,30,50,70,90],
-        'num_leaves': [10,40],
-        'learning_rate': [0.01,0.5], 
-        'bagging_fraction':[0.1,0.9]
-    }
-    return cs 
-
-def hyper_lightgbm_rs():
-    cs={
-        'max_depth': list(range(1,101)),
-        'min_data_in_leaf':list(range(1,101)),
-        'num_leaves': list(range(2,101)),
-        'learning_rate': loguniform(1e-5,1),
-        'bagging_fraction':uniform(0.1,0.90) 
-    }
-    return cs 
-
-def hyper_lightgbm_bo():
-    cs={
-        'max_depth': Integer(1,100,'uniform'),
-        'min_data_in_leaf': Integer(1,100,'uniform'),
-        'num_leaves': Integer(2,100,'uniform'),
-        'learning_rate': Real(1e-5,1,'log-uniform'),
-        'bagging_fraction':Real(0.1,1,'uniform')    
-    }
-    return cs 
 
 def hyper_lightgbm_gs_2(): 
     cs={
@@ -110,6 +81,7 @@ def hyper_lightgbm_bo_2():
     return cs 
 
 def hyper_lightgbm_bohb():
+    cs = CS.ConfigurationSpace()
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
                           ('max_depth',lower=1,upper=100,log=False))
     cs.add_hyperparameter(CSH.UniformIntegerHyperparameter
