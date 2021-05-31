@@ -16,7 +16,7 @@ def exp_default(**kwargs):
     for i in range(0,kwargs["iterasi"]):
         X=kwargs["dataset"][0]
         y=kwargs["dataset"][1]
-        hasil=opt.no_optimizer(X,y,kwargs["model"])
+        hasil=opt.no_optimizer(X,y,kwargs["model"],kwargs["eval_method"])
         print("Iterasi ke-"+str(i+1)+"\n")
         if kwargs["mesin"]==1:
             reader_writer.simpan_hasil_local(kwargs["file_name"],hasil)  

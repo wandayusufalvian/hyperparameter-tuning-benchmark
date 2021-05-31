@@ -13,7 +13,8 @@ experiments.exp_default(
                         mesin=0,
                         file_name="--",
                         iterasi=10,
-                        model=gbdt.xgboost_model())
+                        model=gbdt.xgboost_model(),
+                        eval_method="accuracy")
 
 print("\n")
 
@@ -26,7 +27,8 @@ experiments.exp_default(
                         mesin=0,
                         file_name="--",
                         iterasi=10,
-                        model=gbdt.lightgbm_model())
+                        model=gbdt.lightgbm_model(),
+                        eval_method="accuracy")
 
 print("\n")
 
@@ -39,6 +41,7 @@ experiments.exp_default(
                         mesin=0,
                         file_name="--",
                         iterasi=10,
-                        model=gbdt.catboost_model_2())
+                        model=gbdt.catboost_model_2(),
+                        eval_method="accuracy")
 
 print("\n")

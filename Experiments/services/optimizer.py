@@ -8,11 +8,11 @@ from skopt.callbacks import DeltaXStopper
 import time
 
 skf=StratifiedKFold(n_splits=5)
-eval_method="roc_auc"
+
 
 # default hyperparameter
 
-def no_optimizer(X,y,model):
+def no_optimizer(X,y,model,eval_method):
     start_time = time.time()
     cv_results = cross_validate(model,X,y,cv=skf,scoring=eval_method)
     end_time = time.time()
@@ -21,7 +21,7 @@ def no_optimizer(X,y,model):
 
 # grid, random, dan bayes search 
 
-def optimized_grid_search(X,y,model,parameter):
+def optimized_grid_search(X,y,model,parameter,eval_method):
     start_time = time.time()
     search=GridSearchCV(
                 model,
@@ -36,7 +36,7 @@ def optimized_grid_search(X,y,model,parameter):
 
     return [search.cv_results_,search.best_index_,end_time-start_time]
 
-def optimized_random_search(X,y,model,parameter,seed):
+def optimized_random_search(X,y,model,parameter,seed,eval_method):
     start_time = time.time()
     search=RandomizedSearchCV(
                    model,
@@ -52,7 +52,7 @@ def optimized_random_search(X,y,model,parameter,seed):
 
     return [search.cv_results_,search.best_index_,end_time-start_time]
 
-def optimized_bayesian_search(X,y,model,parameter,seed):
+def optimized_bayesian_search(X,y,model,parameter,seed,eval_method):
     start_time = time.time()
     search= BayesSearchCV(
                    model, 
@@ -69,7 +69,7 @@ def optimized_bayesian_search(X,y,model,parameter,seed):
 
     return [search.cv_results_,search.best_index_,end_time-start_time]
 
-def optimized_bayesian_search_2(X,y,model,parameter,seed):
+def optimized_bayesian_search_2(X,y,model,parameter,seed,eval_method):
     start_time = time.time()
     search= BayesSearchCV(
                    model, 
