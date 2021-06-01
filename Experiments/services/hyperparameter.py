@@ -50,7 +50,7 @@ def hyper_xgboost_bohb():
     return cs
 
 
-def hyper_lightgbm_gs_2(): 
+def hyper_lightgbm_gs(): 
     cs={
         'max_depth': [5,30,50,70,90],
         'scale_pos_weight': [3,5,7,9,14],
@@ -60,7 +60,7 @@ def hyper_lightgbm_gs_2():
     }
     return cs 
 
-def hyper_lightgbm_rs_2():
+def hyper_lightgbm_rs():
     cs={
         'max_depth': list(range(2,101)),
         'scale_pos_weight': uniform(1,19),
@@ -70,7 +70,7 @@ def hyper_lightgbm_rs_2():
     }
     return cs 
 
-def hyper_lightgbm_bo_2():
+def hyper_lightgbm_bo():
     cs={
         'max_depth': Integer(2,100,'uniform'),
         'scale_pos_weight': Real(1,20,'uniform'),
@@ -94,7 +94,8 @@ def hyper_lightgbm_bohb():
                           ('bagging_fraction',lower=0.1,upper=1,log=False))
     return cs 
 
-def hyper_catboost_gs_1():
+
+def hyper_catboost_gs():
     cs={
         'max_depth': [2,5,8,11,14],
         'learning_rate': [0.01,0.1],
