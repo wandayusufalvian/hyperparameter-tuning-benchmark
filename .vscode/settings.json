@@ -1,6 +1,7 @@
 {
-    "python.pythonPath": "/home/yusuf/anaconda3/bin/python",
+    "python.pythonPath": "C:\\ProgramData\\Miniconda3\\python.exe",
     "python.analysis.diagnosticSeverityOverrides": {
         "reportMissingImports": "none"
-    }
+    },
+    "jupyter.jupyterServerType": "local"
 }

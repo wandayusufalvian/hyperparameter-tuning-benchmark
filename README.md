@@ -12,9 +12,18 @@ BOHB is state of the art Hyperparameter Optimization algorithm that was  develop
 
 3 kind of dataset : imbalance binary class, multiclass, and numerical dataset. 
 
+- dataset 1 (imbalance binary class dataset) : https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
+- dataset 2 (multiclass dataset) : https://www.kaggle.com/abisheksudarshan/customer-segmentation
+- dataset 3 (numerical dataset) : https://www.kaggle.com/anmolkumar/house-price-prediction-challenge
+
 ## Environment : 
 - python 3.8.3
 - anaconda 1.4.0
 - Linux Ubuntu 18.04 
-- 
 
+## How to run experiments? 
+I run these experiments in HPC (High Performance Computer). I make 2 .sh files to run experiments in HPC :
+- node_1.sh
+- node_2.sh 
+
+node_1.sh will execute node_1.py and node_2.sh will execute node_2.py . The result will be save in ~/result
