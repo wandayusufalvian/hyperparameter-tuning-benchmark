@@ -1,3 +1,2 @@
-import experiments
-
-experiments.exp_14()
+for i,j in enumerate([1,2,3]):
+    print(i,j)

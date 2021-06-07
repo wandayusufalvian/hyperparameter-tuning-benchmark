@@ -1,4 +1,5 @@
-# xgboost + random search + dataset 1 
+# dataset 1 
+# xgboost + random search
 
 auc_best_index_each_seed=[94,176,170,73,113,147,43,36,52,190]
 
@@ -402,6 +403,8 @@ auc_seed_92=[0.50810015, 0.44375742, 0.40809207, 0.43143116, 0.50062313,
        0.4333877 , 0.39082595, 0.46725904, 0.48856152, 0.4105513 ,
        0.57512129, 0.49641051, 0.42775836, 0.41950002, 0.41877583,
        0.45131918, 0.39843107, 0.41442897, 0.41677696, 0.46413677]
+
+auc_all_each_seed=[auc_seed_1,auc_seed_12,auc_seed_22,auc_seed_32,auc_seed_42,auc_seed_52,auc_seed_62,auc_seed_72,auc_seed_82,auc_seed_92]
 
 auc_best_score_mean=0.575
 auc_best_score_std=0.025

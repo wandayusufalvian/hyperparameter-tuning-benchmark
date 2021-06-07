@@ -1,4 +1,5 @@
-# lightgbm + default hyperparameter + dataset 1 
+# dataset 1 
+# lightgbm + default hyperparameter
 
 auc_score=0.409
 auc_std=0.171
