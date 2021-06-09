@@ -6,7 +6,7 @@ from catboost import CatBoostClassifier
 def xgboost_model():
     return XGBClassifier(verbosity = 0,use_label_encoder =False)
 
-def lightgbm_model():
+def lightgbm_model(verbose=-1):
     return LGBMClassifier()
 
 def catboost_model():

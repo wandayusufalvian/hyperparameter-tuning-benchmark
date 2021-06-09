@@ -3,15 +3,15 @@ import pandas as pd
 import numpy as np
 
 def baca_data_bank():
-    X_path=os.path.join(os.getcwd(),"dataset-ready","X-bank.csv")
-    y_path=os.path.join(os.getcwd(),"dataset-ready","y-bank.csv")
+    X_path=os.path.join(os.getcwd(),"dataset_ready","X-bank.csv")
+    y_path=os.path.join(os.getcwd(),"dataset_ready","y-bank.csv")
     X=np.genfromtxt(X_path, delimiter=',')
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
 
 def baca_data_bank_catboost():
-    X_path=os.path.join(os.getcwd(),"dataset-ready","X-bank-catboost.csv")
-    y_path=os.path.join(os.getcwd(),"dataset-ready","y-bank.csv")
+    X_path=os.path.join(os.getcwd(),"dataset_ready","X-bank-catboost.csv")
+    y_path=os.path.join(os.getcwd(),"dataset_ready","y-bank.csv")
     X=np.genfromtxt(X_path, delimiter=',')
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
@@ -25,8 +25,8 @@ def baca_data_cus_seg():
 
 
 def baca_data_cus_seg_catboost():
-    X_path=os.path.join(os.getcwd(),"dataset-ready","X_cus_seg_catboost.csv")
-    y_path=os.path.join(os.getcwd(),"dataset-ready","y_cus_seg.csv")
+    X_path=os.path.join(os.getcwd(),"dataset_ready","X_cus_seg_catboost.csv")
+    y_path=os.path.join(os.getcwd(),"dataset_ready","y_cus_seg.csv")
     X=np.genfromtxt(X_path, delimiter=',')
     y=np.genfromtxt(y_path, delimiter=',')
     return X,y
