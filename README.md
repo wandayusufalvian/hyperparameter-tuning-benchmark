@@ -26,4 +26,10 @@ I run these experiments in HPC (High Performance Computer). I make 2 .sh files t
 - node_1.sh
 - node_2.sh 
 
-node_1.sh will execute node_1.py and node_2.sh will execute node_2.py . The result will be save in ~/result
+node_1.sh will execute node_1.py and node_2.sh will execute node_2.py.
+change this code in node_1.sh or node_2.sh to save the file
+```
+#SBATCH --output=result_raw/your-file-name.txt 
+```
+
+The result will be save in ~/result_raw/your-file-name.txt

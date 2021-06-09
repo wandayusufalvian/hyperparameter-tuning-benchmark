@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 
-def bar_chart(x,y,x_label,y_label,title,decimal,locations):
-    # barchart with flexible text locations and color
+def bar_chart(x,y,x_label,y_label,title,decimal,locations,tilt_axis=False):
     bars_1=plt.bar(x,y)
     x1,x2,y1,y2 = plt.axis()  
     plt.axis((x1,x2,y1,1.1*y2))
@@ -13,13 +12,12 @@ def bar_chart(x,y,x_label,y_label,title,decimal,locations):
                     ha='center', va='bottom',color=warna)
     plt.xlabel(x_label,fontsize=20)
     plt.ylabel(y_label,fontsize=20)
-    plt.title(title,fontsize=20)
-    plt.tight_layout()
+    plt.title(title,fontsize=15)
+    if(tilt_axis==True):
+        plt.xticks(rotation=10)
     plt.show()
 
 def scatter_subplot(x,y_list,x_label,y_label,best_indexes,titles):
-    # untuk grid search
-    # satu bintang
     star_color='yellow'
     start_size=22
     y_count=len(y_label)
@@ -40,8 +38,7 @@ def scatter_subplot(x,y_list,x_label,y_label,best_indexes,titles):
     axs[i].set_xlabel(x_label,fontsize=20)
 
 def scatter_subplot_2(x,y_list,x_label,y_label,best_indexes,titles):
-    # bayes vs random
-    # dua bintang
+    # 2 scatter plot
     star_bayes_color='green'
     star_random_color='yellow'
     star_size=22
@@ -60,8 +57,3 @@ def scatter_subplot_2(x,y_list,x_label,y_label,best_indexes,titles):
 
     axs[i].set_xlabel(x_label,fontsize=20)
 
-
-def scatter_subplot_3():
-    # menunjukkan semua hasil bayes vs random untuk tiap seed. 
-    # jaga2 aja kalau misalkan nanti diperlukan 
-    pass

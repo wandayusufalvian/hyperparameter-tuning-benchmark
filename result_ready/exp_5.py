@@ -1,12 +1,10 @@
-# xgboost + bohb + dataset 1 
+# dataset 1 
+# xgboost + bohb
+# artificial, belum dilakukan
 
-
-exec_time=[]
-
-best_auc=None
-
-std=[] 
-
+auc_best_score_mean=1
+auc_best_score_std=1
+exec_time_mean=1000
 
 
 
