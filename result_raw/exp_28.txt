@@ -1,9 +1,0 @@
-experiment 23_1 : lightgbm + dataset 2 + random search
-
-Traceback (most recent call last):
-  File "node_2.py", line 8, in <module>
-    experiments.exp_random_search(
-  File "/home/m448735/hyperparameter-tuning-benchmark/experiments.py", line 58, in exp_random_search
-    hasil=opt.optimized_random_search(X,y,kwargs["model"],kwargs["hyperparameter"],seed)
-TypeError: optimized_random_search() missing 1 required positional argument: 'eval_method'
-srun: error: komputasi06: task 0: Exited with exit code 1

@@ -55,7 +55,7 @@ def exp_random_search(**kwargs):
     for seed in kwargs["seeds"]:
         X=kwargs["dataset"][0]
         y=kwargs["dataset"][1]
-        hasil=opt.optimized_random_search(X,y,kwargs["model"],kwargs["hyperparameter"],seed)
+        hasil=opt.optimized_random_search(X,y,kwargs["model"],kwargs["hyperparameter"],seed,kwargs["eval_method"])
         print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
         if kwargs["mesin"]==1:
             reader_writer.simpan_hasil_local(kwargs["file_name"],hasil)  
@@ -76,7 +76,7 @@ def exp_bayes_search(**kwargs):
     for seed in kwargs["seeds"]:
         X=kwargs["dataset"][0]
         y=kwargs["dataset"][1]
-        hasil=opt.optimized_bayesian_search(X,y,kwargs["model"],kwargs["hyperparameter"],seed)
+        hasil=opt.optimized_bayesian_search(X,y,kwargs["model"],kwargs["hyperparameter"],seed,kwargs["eval_method"])
         print("=====================================Seed = "+str(seed)+"======================================================"+"\n")
         if kwargs["mesin"]==1:
             reader_writer.simpan_hasil_local(kwargs["file_name"],hasil)  
