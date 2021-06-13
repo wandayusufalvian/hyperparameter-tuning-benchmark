@@ -1,4 +1,5 @@
-# xgboost + default hyperparameter + dataset 1 
+# dataset 1
+# xgboost + default hyperparameter
 
 auc_score=0.412
 auc_std=0.162
