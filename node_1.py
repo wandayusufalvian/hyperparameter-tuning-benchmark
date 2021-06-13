@@ -4,44 +4,43 @@ import services.models as gbdt
 import services.hyperparameter as hyper
 
 
-# exp 17  
+print("experiment 18 : xgboost + dataset 2 + random search"+"\n")
 
-print("experiment 17 : xgboost + dataset 2 + grid search"+"\n")
-
-experiments.exp_grid_search(
+experiments.exp_random_search(
                             dataset=reader_writer.baca_data_cus_seg(),
                             mesin=0,
                             file_name="--",
                             model=gbdt.xgboost_model(),
                             hyperparameter=hyper.hyper_xgboost_gs(),
+                            seeds=[1,12,22,32,42,52,62,72,82,92],
                             eval_method="accuracy")
 
 print("\n")
 
-# exp 22 : 
 
-print("experiment 22 : lightgbm + dataset 2 + grid search"+"\n")
 
-experiments.exp_grid_search(
-                            dataset=reader_writer.baca_data_cus_seg(),
-                            mesin=0,
-                            file_name="--",
-                            model=gbdt.lightgbm_model(),
-                            hyperparameter=hyper.hyper_lightgbm_gs(),
-                            eval_method="accuracy")
+print("experiment 28_1 : catboost + dataset 2 + random search"+"\n")
 
-print("\n")
-
-# exp 27 :
-
-print("experiment 27 : catboost + dataset 2 + grid search"+"\n")
-
-experiments.exp_grid_search(
+experiments.exp_random_search(
                             dataset=reader_writer.baca_data_cus_seg(),
                             mesin=0,
                             file_name="--",
                             model=gbdt.catboost_model_2(),
                             hyperparameter=hyper.hyper_catboost_gs(),
+                            seeds=[1,12,22],
+                            eval_method="accuracy")
+
+print("\n")
+
+print("experiment 28_2 : catboost + dataset 2 + random search"+"\n")
+
+experiments.exp_random_search(
+                            dataset=reader_writer.baca_data_cus_seg(),
+                            mesin=0,
+                            file_name="--",
+                            model=gbdt.catboost_model_2(),
+                            hyperparameter=hyper.hyper_catboost_gs(),
+                            seeds=[32,42,52,62,72,82,92],
                             eval_method="accuracy")
 
 print("\n")

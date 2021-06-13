@@ -64,7 +64,7 @@ def simpan_hasil_local(name,hasil):
         for i in kunci:
             f.write(i+" : "+str([hasil[0][i]])+"\n")
         f.write("best_index: "+str(best_index)+"\n")
-        f.write("best_auc: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
+        f.write("best_score: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
         f.write("best_std: "+str(hasil[0]['std_test_score'][best_index])+"\n")
         f.write("best_param: "+str(hasil[0]['params'][best_index])+"\n")
         f.write("total time : "+str(hasil[2])+" seconds")
@@ -87,7 +87,7 @@ def simpan_hasil_hpc(hasil):
         for i in kunci:
             print(i+" : "+str([hasil[0][i]])+"\n")
         print("best_index: "+str(best_index)+"\n")
-        print("best_auc: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
+        print("best_score: "+str(hasil[0]['mean_test_score'][best_index])+"\n")
         print("best_std: "+str(hasil[0]['std_test_score'][best_index])+"\n")
         print("best_param: "+str(hasil[0]['params'][best_index])+"\n")
         print("total time : "+str(hasil[2])+" seconds"+"\n")

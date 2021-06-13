@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
-def bar_chart(x,y,x_label,y_label,title,decimal,locations,tilt_axis=False):
-    bars_1=plt.bar(x,y)
+def bar_chart(x,y,x_label,y_label,title,decimal,locations,warna_list,tilt_axis=False):
+    bars_1=plt.bar(x,y,color=warna_list)
     x1,x2,y1,y2 = plt.axis()  
     plt.axis((x1,x2,y1,1.1*y2))
     for bar,l in zip(bars_1,locations):
