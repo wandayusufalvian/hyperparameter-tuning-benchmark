@@ -11,7 +11,7 @@ experiments.exp_random_search(
                             mesin=0,
                             file_name="--",
                             model=gbdt.xgboost_model(),
-                            hyperparameter=hyper.hyper_xgboost_gs(),
+                            hyperparameter=hyper.hyper_xgboost_rs(),
                             seeds=[1,12,22,32,42,52,62,72,82,92],
                             eval_method="accuracy")
 
@@ -19,28 +19,16 @@ print("\n")
 
 
 
-print("experiment 28_1 : catboost + dataset 2 + random search"+"\n")
+print("experiment 19 : xgboost + dataset 2 + bayes search"+"\n")
 
-experiments.exp_random_search(
+experiments.exp_bayes_search(
                             dataset=reader_writer.baca_data_cus_seg(),
                             mesin=0,
                             file_name="--",
-                            model=gbdt.catboost_model_2(),
-                            hyperparameter=hyper.hyper_catboost_gs(),
-                            seeds=[1,12,22],
+                            model=gbdt.xgboost_model(),
+                            hyperparameter=hyper.hyper_xgboost_bo(),
+                            seeds=[1,12,22,32,42,52,62,72,82,92],
                             eval_method="accuracy")
 
 print("\n")
 
-print("experiment 28_2 : catboost + dataset 2 + random search"+"\n")
-
-experiments.exp_random_search(
-                            dataset=reader_writer.baca_data_cus_seg(),
-                            mesin=0,
-                            file_name="--",
-                            model=gbdt.catboost_model_2(),
-                            hyperparameter=hyper.hyper_catboost_gs(),
-                            seeds=[32,42,52,62,72,82,92],
-                            eval_method="accuracy")
-
-print("\n")

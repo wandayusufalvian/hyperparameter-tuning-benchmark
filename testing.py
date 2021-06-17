@@ -11,4 +11,6 @@ class TestReaderWriter(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main() 
+    #unittest.main() 
+    X,y=reader_writer.baca_data_housing()
+    print(X[20000])

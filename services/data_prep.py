@@ -6,14 +6,16 @@ from sklearn.compose import ColumnTransformer
 import math
 
 
-def banyak_tiap_kategori(X):
-    cat_df=X.select_dtypes(include='object')
-    cat_cols=cat_df.columns
-    for i in cat_cols:
-        print(i,'\n')
-        print(X[i].value_counts(),'\n')
+def calc_unique(X,koloms):
+    '''menghitung banyak nilai unik untuk fitur pada list koloms'''
+    for i,k in enumerate(koloms):
+        print(i+1,". ",k,'----------------------\n')
+        print("nilai unik: ",len(X[k].unique()),'\n')
+        print(X[k].value_counts(),'\n')
 
-def pisah_x_y(data):
+
+def split_x_y(data):
+    '''pisah data jadi X dan y'''
     y=data.iloc[:,-1:]
     X=data.iloc[:,0:-1]
     return X,y
@@ -25,6 +27,18 @@ def transform_kelas(y):
 
 def transform_fitur(X,numerical_col,categorical_onehot):
     t = [('cat', OneHotEncoder(sparse=False), categorical_onehot),('num', MinMaxScaler(), numerical_col)]
+    col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
+    X=col_transform.fit_transform(X)
+    return X
+
+def transform_fitur_onehot(X,categorical_onehot):
+    t = [('cat', OneHotEncoder(sparse=False), categorical_onehot)]
+    col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
+    X=col_transform.fit_transform(X)
+    return X
+
+def transform_fitur_minmaxscaler(X,numerical_col):
+    t = [('num', MinMaxScaler(), numerical_col)]
     col_transform = ColumnTransformer(transformers=t,remainder='passthrough')
     X=col_transform.fit_transform(X)
     return X
@@ -52,15 +66,12 @@ def hitung_kategori(X):
         sum=sum+len(X[i].unique())
     print("\n total kategori= ",sum)
 
-# def hitung_kategori(X,fitur_kategorikal):
-#     sum=0
-#     for i in fitur_kategorikal:
-#         print(i,"=",len(X[i].unique())," kategori")
-#         sum=sum+len(X[i].unique())
-#     print("\n total kategori= ",sum)
-
 
 def balance_or_not(banyak_kelas, list_jumlah):
+    '''
+    menentukan apakah suatu data kategorikal balance atau tidak
+    sumber : https://stats.stackexchange.com/questions/239973/a-general-measure-of-data-set-imbalance
+    '''
     n=sum(list_jumlah)
     H=0 
     for i in list_jumlah:
