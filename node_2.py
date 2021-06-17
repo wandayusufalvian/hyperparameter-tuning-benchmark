@@ -9,7 +9,7 @@ experiments.exp_random_search(
                             dataset=reader_writer.baca_data_cus_seg(),
                             mesin=0,
                             file_name="--",
-                            model=gbdt.lightgbm_model,
+                            model=gbdt.lightgbm_model(),
                             hyperparameter=hyper.hyper_lightgbm_rs(),
                             seeds=[1,12,22,32,42,52,62,72,82,92],
                             eval_method="accuracy")
