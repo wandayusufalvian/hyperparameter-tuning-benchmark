@@ -4,29 +4,26 @@ import services.models as gbdt
 import services.hyperparameter as hyper
 
 
-print("experiment 18 : xgboost + dataset 2 + random search"+"\n")
+print("experiment 27 : catboost + dataset 2 + grid search"+"\n")
 
-experiments.exp_random_search(
-                            dataset=reader_writer.baca_data_cus_seg(),
+experiments.exp_grid_search(
+                            dataset=reader_writer.baca_data_cus_seg_catboost(),
                             mesin=0,
                             file_name="--",
-                            model=gbdt.xgboost_model(),
-                            hyperparameter=hyper.hyper_xgboost_rs(),
-                            seeds=[1,12,22,32,42,52,62,72,82,92],
+                            model=gbdt.catboost_model_2(),
+                            hyperparameter=hyper.hyper_catboost_gs(),
                             eval_method="accuracy")
 
 print("\n")
 
+print("experiment 28 : catboost + dataset 2 + random search"+"\n")
 
-
-print("experiment 19 : xgboost + dataset 2 + bayes search"+"\n")
-
-experiments.exp_bayes_search(
-                            dataset=reader_writer.baca_data_cus_seg(),
+experiments.exp_random_search(
+                            dataset=reader_writer.baca_data_cus_seg_catboost(),
                             mesin=0,
                             file_name="--",
-                            model=gbdt.xgboost_model(),
-                            hyperparameter=hyper.hyper_xgboost_bo(),
+                            model=gbdt.catboost_model_2(),
+                            hyperparameter=hyper.hyper_catboost_rs(),
                             seeds=[1,12,22,32,42,52,62,72,82,92],
                             eval_method="accuracy")
 

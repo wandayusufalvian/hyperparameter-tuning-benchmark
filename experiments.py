@@ -32,6 +32,7 @@ def exp_grid_search(**kwargs):
     hyperparameter= dict of hyperparameter list
     file_name = nama txt file untuk simpan hasil eksperimen. jika run di HPC, file_name diisi bebas, tp nama sebenarnya harus ditulis pada .sh file.
     mesin = 1 jika run locally. selain 1 jika ingin run di HPC.  
+    eval method = sesuaikan jenis dataset 
     '''
     X=kwargs["dataset"][0]
     y=kwargs["dataset"][1]
@@ -51,6 +52,7 @@ def exp_random_search(**kwargs):
     seeds = list of seed for random behaviour
     file_name = nama txt file untuk simpan hasil eksperimen. jika run di HPC, file_name diisi bebas, tp nama sebenarnya harus ditulis pada .sh file.
     mesin = 1 jika run locally. selain 1 jika ingin run di HPC.  
+    eval method = sesuaikan jenis dataset 
     '''
     for seed in kwargs["seeds"]:
         X=kwargs["dataset"][0]
@@ -72,6 +74,7 @@ def exp_bayes_search(**kwargs):
     seeds = list of seed for random behaviour
     file_name = nama txt file untuk simpan hasil eksperimen. jika run di HPC, file_name harus ditulis ulang pada .sh file.
     mesin = 1 jika run locally. selain 1 jika ingin run di HPC.  
+    eval method = sesuaikan jenis dataset 
     '''
     for seed in kwargs["seeds"]:
         X=kwargs["dataset"][0]
