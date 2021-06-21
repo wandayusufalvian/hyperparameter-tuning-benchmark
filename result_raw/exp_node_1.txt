@@ -1,5 +1,0 @@
-experiment 33 : xgboost + dataset 3 + random search
-
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd: error: *** STEP 8091.0 ON komputasi04 CANCELLED AT 2021-06-21T23:02:31 ***
-slurmstepd: error: *** JOB 8091 ON komputasi04 CANCELLED AT 2021-06-21T23:02:31 ***
