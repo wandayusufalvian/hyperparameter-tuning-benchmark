@@ -1,5 +1,4 @@
 from sklearn.model_selection import StratifiedKFold
-from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import GridSearchCV
@@ -7,14 +6,13 @@ from skopt import BayesSearchCV
 from skopt.callbacks import DeltaXStopper
 import time
 
-skf=StratifiedKFold(n_splits=5)
 
 
 # default hyperparameter
 
 def no_optimizer(X,y,model,eval_method):
     start_time = time.time()
-    cv_results = cross_validate(model,X,y,cv=skf,scoring=eval_method)
+    cv_results = cross_validate(model,X,y,cv=5,scoring=eval_method)
     end_time = time.time()
     list_hasil=[cv_results,end_time-start_time]
     return list_hasil
