@@ -1,4 +1,4 @@
-import numpy as np 
+
 import ConfigSpace as CS
 import ConfigSpace.hyperparameters as CSH
 from skopt.space import Real,Integer

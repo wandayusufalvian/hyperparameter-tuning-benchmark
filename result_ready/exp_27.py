@@ -2,8 +2,8 @@
 # catboost + grid search 
 
 exec_time=4862
-accuracy_best_score=0.54
-accuracy_best_std=0.007
+acc_best_score=0.54
+acc_best_std=0.007
 
 best_index=52
 

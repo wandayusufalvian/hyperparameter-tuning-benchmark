@@ -1,4 +1,4 @@
-from sklearn.model_selection import StratifiedKFold
+
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.model_selection import GridSearchCV
